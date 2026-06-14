@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Model Advisor Report for 'convolution_2D_v3/HDL_DUT'</title>  
+<style type="text/css">
+<!--
+@media screen {    
+    /* Table Formatting */
+    .AdvTable th { 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+    }
+}
+
+@media all {
+    *{ font-family: sans-serif; }
+
+	H3 {
+		font-size: 14pt;
+		font-weight: 200;
+	}
+	H4 {
+		font-size: 9pt;
+		font-weight: normal;
+	}
+	H5 {
+		font-size: 12pt;
+		font-style: italic;
+		font-weight: bold;
+		color: #333333;
+		margin-bottom: 2px;
+	}
+	a[href] {
+		color: #005FCE;
+	}
+	.subsection {
+		padding-left: 30px;
+	}
+    
+    .CheckHeading {
+		font-size:1.05em;
+		font-weight:bold;
+	}
+
+    /* Table Formatting */
+    table.AdvTable { 
+        border-collapse:collapse; border:1px solid #ececec; border-right:none; border-bottom:none; 
+    }
+
+    .AdvTable th { 
+        padding-left:5px; 
+        padding-right:5px; 
+        color:#fff; 
+        line-height:120%; 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+        border-right: 1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+
+    .AdvTable td { 
+        padding-left:5px; 
+        padding-right:5px; 
+        border-right:1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+    
+    .AdvTable th p { 
+        margin-bottom:0px; 
+    }
+
+    .AdvTable p { 
+        margin-bottom:10px; 
+    }
+    
+    .AdvTableNoBorder p { 
+        margin-bottom:10px; 
+    }
+
+    table+span.SDCollapseControl { 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    ul+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em;
+        font-weight:bold; 
+    }
+
+    ol+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    .SystemdefinedCollapse { 
+        margin-top:0px;
+        margin-bottom:5px; 
+    }
+
+    div.AllCollapse p, div.AllCollapse table, div.AllCollapse ol, div.AllCollapse ul { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px;
+    }
+
+    div.AllCollapse + div { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px; 
+    }
+
+    img.CollapseAllControlImage { 
+        float:left; 
+    }
+
+    .SubResultsSummary {
+        padding-left:30px;
+    }
+
+    .EmptyFolderMessage {
+        color:gray;
+        margin:10px 0 0 30px;
+        font-size:0.8em;
+    }
+	
+    .CsEml-Symbol-Status-Pass
+    { 
+        color: green;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Warn
+        { 
+        color: orange;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Fail
+    { 
+        color: red;
+        font-family: monospace;
+    }
+    
+    .CsEml-Line-Number
+    {
+        color: #A0A0A0;
+        font-style: italic;
+        font-family: monospace;
+    }
+
+    .CsEml-Code
+    {
+        color: blue;
+        font-family: monospace;
+    }
+
+    .CsEml-Code-Fragment
+    {
+        color: blue;
+        font-weight: bold;
+        font-family: monospace;
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .CsEml-Function-Type
+    {
+        color:       #A0A0A0;
+        font-style:  italic;
+        font-family: monospace;
+    }
+
+}
+-->
+</style>
+
+<style type="text/css">
+/* Copyright 2013-2023 The MathWorks, Inc. */
+<!--
+@media screen {
+    #Container {
+        overflow-x:hidden;
+    }
+
+	#ControlPanel {
+		position: fixed;
+		top: 5px;
+		left: 10px;
+		bottom: 5px;
+		width: 210px;
+		padding: 2px 0 2px 2px;
+		border: 1px solid #EEEEEE;
+		font-family: sans-serif;
+		font-size: 0.85em;
+	}
+
+	#HidePanelControl {
+		position:absolute;
+		top:0;
+		left:204px;
+		width:8px;
+		height:100%;
+		font-size: 8px;
+	}
+	
+	#HidePanelControl:hover {
+		background-color: #EFEFFB;
+	}
+	
+	#HidePanelControlInner {
+		position:absolute; top:50%;
+	}
+
+	#ControlsCheckFiltering {
+		position:absolute;
+		top:2px;
+		border: 1px solid #ececec;
+		padding-bottom: 8px;
+		margin-top: 0;
+		margin-bottom:0;
+		height:190px;
+		width:200px;
+	}
+
+	#TextFilter{
+		position:absolute;
+		top:202px;
+		padding-top:5px;
+        margin-left:12px;  
+	}
+		
+	#ControlsTOC {
+		position: absolute;
+		top:242px;
+		bottom:130px;
+		margin-top: 0;
+		margin-bottom: 0;
+		width:200px;
+		border: 1px solid #ececec;
+	}
+	
+	#ControlsView {
+		position:absolute;
+		bottom:2px;
+		width:200px;
+		margin-top: 0;
+		margin-bottom: 0;
+		height:110px;
+		border: 1px solid #ececec;
+	}
+	
+	#TOCScrollableArea {
+		position:absolute;
+		top:30px;
+		bottom:0;
+		width:100%;
+		padding-bottom:5px;
+		overflow:auto;
+	}
+	
+	#ControlsCheckFiltering input[type=checkbox] { margin-right: 15px; }
+	
+	#ControlPanel h2 {
+		margin: 0 0 10px 0;
+		background-color: #ECECEC;
+		font-size: 1em;
+		font-weight: normal;
+		color: #333333;
+		padding: 2px 5px 1px 5px;
+		height:20px;
+	}
+
+	.ControlPanelTextControl a[href] {
+		text-decoration: none;
+		font-weight: normal;
+		color: #F6F6F6;
+	}
+	
+	.ControlPanelTextControl {
+		line-height: 160%;
+		font-weight: normal;
+		color: #005FCE;
+		margin: 0 0 0 5px;
+		padding-right:15px;
+        padding-left:18px;
+        text-indent:-18px;
+	}
+	
+	.ControlPanelTextControl:hover {
+		background-color: #EFEFFB;
+	}
+	
+	#TxtFilterInput {
+		width: 170px;
+		color: gray;
+	}
+
+	#CPFilteringTable {
+        margin-left:5px;
+        width:165px;
+        border: none;
+    }
+
+    #CPFilteringTable td { border: none; }
+
+    #CPToTopImg { position:relative; top:3px; width:18px; height:17px; }
+    #CPCollapseImg { position:relative; top:2px; width:16px; height:16px; margin-right:3px; }
+
+	.ReportContent { margin-left: 225px; }
+}
+
+@media print {
+	#ControlPanel {
+		display: none;
+	}
+
+    #ShowPanelControl{
+		display:none;
+    }
+    
+    .ReportContent { margin-left: 0px; }
+}
+-->
+
+</style>
+
+<script type="text/javascript"> <!-- /* Copyright 2013-2017 The MathWorks, Inc */
+/* define String.trim() method if not defined (used by filterByText() function) */
+if(!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g,'');
+  };
+}
+
+// rtwreport needs it 
+function init() {
+    var showFailed = document.getElementById("Failed Checkbox");
+    var showPassed = document.getElementById("Passed Checkbox");
+    var showWarning = document.getElementById("Warning Checkbox");
+    var showNotRun = document.getElementById("Not Run Checkbox");
+    var showJustified = document.getElementById("Justified Checkbox");
+    var showIncomplete = document.getElementById("Incomplete Checkbox");      
+    
+    urlQueryStringRegexp = RegExp('\\?(.*)').exec(window.location.search);
+
+    if (urlQueryStringRegexp == null) {
+        /* refresh check boxes and search input */
+        showFailed.checked = true;
+        showPassed.checked = true;
+        showWarning.checked = true;
+        showNotRun.checked = true;
+        showJustified.checked = true;
+        showIncomplete.checked = true;
+    }
+    else 
+    {
+        showFailed.checked = false;
+        showPassed.checked = false;
+        showWarning.checked = false;
+        showNotRun.checked = false;
+        
+        urlQueryString = urlQueryStringRegexp[1];
+        
+        var queryArgs = [];
+        
+        if (urlQueryString.indexOf("&") == -1)
+        {
+            // Only 1 argument
+            queryArgs[0] = urlQueryString;
+        }
+        else
+        {
+            queryArgs = urlQueryString.split("&");
+        }
+        
+        for (var idx = 0; idx < queryArgs.length; ++idx)
+        {
+            // get in
+            if (queryArgs[idx].localeCompare("showPassedChecks") == 0) 
+            {
+                showPassed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showWarningChecks") == 0) 
+            {
+                showWarning.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showFailedChecks") == 0)
+            {
+                showFailed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showNotRunChecks") == 0)
+            {
+                showNotRun.checked = true;
+            }
+        }
+            
+        // if nothing is selected, select everything
+        if (!showFailed.checked && !showPassed.checked && 
+            !showWarning.checked && !showNotRun.checked) 
+        {
+            showFailed.checked = true;
+            showPassed.checked = true;
+            showWarning.checked = true;
+            showNotRun.checked = true;
+            showJustified.checked = true;
+            showIncomplete.checked = true;
+        }
+    }
+    
+    updateVisibleChecks();
+}
+
+function markEmptyFolders(){
+	var nodeTypes = ["FailedCheck","PassedCheck",  "WarningCheck", "NotRunCheck"];
+	var folderArray = document.querySelectorAll("div.FolderContent");
+	
+	for (var n=0;n<folderArray.length;n++){
+		/* get direct check result children and check visibility */
+		var childNodes = folderArray[n].childNodes;
+		var noneVisible = true;
+		var noChecksInFolder = true;
+		
+		for (var ni=0;ni<childNodes.length;ni++){
+			if (childNodes[ni].nodeType == 1 && childNodes[ni].tagName.toLowerCase() == "div"){
+				if (childNodes[ni].className == nodeTypes[0] || childNodes[ni].className == nodeTypes[1] || childNodes[ni].className == nodeTypes[2] || childNodes[ni].className == nodeTypes[3]){
+					noChecksInFolder = false;
+					if (childNodes[ni].style.display != "none"){
+						noneVisible = false;
+                        break;
+					}
+				}
+			}
+		}
+		
+		/* Only display hidden message if any checks inside the folders and not just other folders */
+		if (!noChecksInFolder){
+			var hiddenMessage = folderArray[n].querySelector("div.EmptyFolderMessage");
+			
+			if (hiddenMessage && noneVisible == true){
+				hiddenMessage.style.display = "";
+			}else if (hiddenMessage && noneVisible == false){
+				hiddenMessage.style.display = "none";
+			}else{
+				/* hidden message not found */
+			}
+		}
+	}
+
+    return;
+}
+
+function updateVisibleChecks( /* show all flags */ checkbox ){
+	
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox", "Justified Checkbox", "Incomplete Checkbox"];
+	var nodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check", "Justified Check", "Incomplete Check"];
+	var textInput = document.getElementById("TxtFilterInput");
+	
+	
+	if (checkbox && textInput && textInput.color=="gray"){
+		var checkType = checkbox.id;
+		var ind = checkboxes.indexOf(checkType);
+		var nodes = document.getElementsByName(nodeTypes[ind]);
+		for (i = 0; i < nodes.length;i++){
+		    nodes[i].style.display = checkbox.checked ? "" : "none";
+		}
+	}
+	else{ /* Update all checks if called from init or if a previous text filter was applied */
+		for (i = 0; i < checkboxes.length; i++){
+			
+			  var show = document.getElementById(checkboxes[i]).checked ? "" : "none";
+			  var nodes = document.getElementsByName(nodeTypes[i]);
+			  for(j = 0; j < nodes.length; j++){
+				  nodes[j].style.display = show;
+			  }
+		   
+		}
+	}
+
+    /* clear text search */
+	if (textInput && checkbox){
+		textInput.value = "Search by check name";
+        textInput.style.color = "gray";
+        textInput.blur;
+	}
+
+    markEmptyFolders();
+
+    return; 
+}
+
+function filterByText(ev){
+	// get all the nodes
+	var allNodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check"];
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox"];
+	var nodeTypes = [];
+	
+	// get nodes depending on filter selections
+	for (var n=0; n<checkboxes.length; n++){
+		var checkbox = document.getElementById(checkboxes[n]);
+		if (checkbox && checkbox.checked){
+			nodeTypes.push(allNodeTypes[n]);
+		}
+	}
+	
+    var searchNodes = [".CheckHeading"];
+    var allnodes = [];
+	var alltext = [];
+	if (!ev) return;
+	var target = ev.target ? ev.target : window.event.srcElement;
+	var searchString = target.value;
+	
+	if (!searchString){
+        updateVisibleChecks();  // clear all and display by other filters
+	}else{
+		for (i = 0; i < nodeTypes.length; i++){
+			var nodes = document.getElementsByName(nodeTypes[i]);
+			for (j = 0; j < nodes.length; j++){
+				// get text from check heading
+				var checkContent = nodes[j].querySelector(searchNodes).innerHTML;
+				// creaet a regular expression to ignore case
+				var ss = new RegExp(searchString.trim(), "i");
+				if (ss.exec(checkContent)){
+				   nodes[j].style.display = "";
+				}else{
+				   nodes[j].style.display = "none";
+				}
+			}
+		}
+        markEmptyFolders();
+	}	
+}
+
+
+function MATableShrink(o,tagNameStr){
+    var temp = document.getElementsByName(tagNameStr);
+    var classUsed = document.getElementsByName('EmbedImages'); 
+    var embeddedMode = !(classUsed.length == 0);
+    var img = o.querySelector("img");
+
+    if (temp[0].style.display == "") 
+    {
+        temp[0].style.display = "none";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }
+        else
+        {
+            img.src = "plus.png";
+        }
+    } 
+    else 
+    {
+        temp[0].style.display = "";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+        else
+        {
+            img.src = "minus.png";
+        }
+    }
+}
+
+// rtwreport needs it 
+function updateHyperlink() {
+    docObj = window.document;
+    loc = document.location;
+    var aHash = "";
+    var externalweb = "false";
+    if (loc.search || loc.hash) {
+        if (loc.search)
+            aHash = loc.search.substring(1);
+        else
+            aHash = loc.hash.substring(1);
+    }    
+    var args = new Array();
+    args = aHash.split('&');
+    for (var i = 0; i < args.length; ++i) {
+        var arg = args[i];
+          sep = arg.indexOf('=');
+        if (sep != -1) {
+            var cmd = arg.substring(0,sep);
+            var opt = arg.substring(sep+1);
+            switch (cmd.toLowerCase()) {
+            case "externalweb":
+                externalweb = opt;
+                break;
+            }
+        }
+    }        
+    if (externalweb === "true") {        
+        var objs = docObj.getElementsByTagName("a");
+        if (objs.length > 0 && objs[0].removeAttribute) {
+            for (var i = 0; i < objs.length; ++i) {           
+                if (objs[i].href.indexOf('matlab') > -1)           
+                    objs[i].removeAttribute("href");                
+            }
+        }
+    }
+    init();
+}
+    
+function findParentNode(e) {
+   var parent = e.parentElement;
+   if (!!parent) {
+    if (parent.id == "") {   
+       return findParentNode(parent);
+    } else {
+       return parent;
+    }
+   } else {
+    return null;
+   }
+}
+
+function expandParentNode(e) {
+   var parent = findParentNode(e);
+   while (!!parent) { 
+    var prefix = "FolderControl_";
+    var folderControl = document.getElementById(prefix.concat(parent.id));
+    if (parent.style.display == "none") {       
+       MATableShrink(folderControl,parent.id);
+    }
+    parent = findParentNode(parent);
+   }
+}
+
+function isHidden(e) {
+    return (e.offsetParent === null)
+}
+
+function navigateToElement(eleID) {
+   var e = document.getElementById(eleID);
+   if (isHidden(e)) {
+       expandParentNode(e);
+   }       
+   if (!!e && e.scrollIntoView) {
+       e.scrollIntoView();
+   }
+}
+
+function setTextContent(element, value) {
+    var content = element.textContent;
+    if (value === undefined) return;
+    
+    if (content !== undefined) element.textContent = value;
+    else element.innerText = value;
+}
+
+function hideControlPanel(control){
+	var panelComponents = ["ControlsCheckFiltering", "ControlsView", "ControlsTOC"];
+	var reportContent = document.querySelector(".ReportContent");
+	var controlPanel = document.getElementById("ControlPanel");
+	var isHidden = false;
+	
+    if (reportContent && control && controlPanel) {
+    	for (var n=0; n<panelComponents.length; n++){
+			var component = document.getElementById(panelComponents[n]);
+			
+			if (component && component.style.display == ""){
+				component.style.display = "none";
+            } else if (component && component.style.display == "none"){
+				component.style.display = "";
+			}
+		}
+		
+		if (controlPanel.style.width != "6px"){
+			reportContent.style.marginLeft = "25px";
+	    	controlPanel.style.width = "6px";
+	    	control.style.left = "0px";
+	       	var innerDiv = control.querySelector("#HidePanelControlInner");
+	       	setTextContent(innerDiv, "\u25BA");
+	    } else {
+	    	reportContent.style.marginLeft = "225px";
+        	controlPanel.style.width = "210px";
+        	control.style.left = "204px";
+        	var innerDiv = control.querySelector("#HidePanelControlInner");
+        	setTextContent(innerDiv, "\u25C0");
+        }
+    }
+}
+/* Copyright 2013 The MathWorks, Inc. */
+//COLLAPSIBLE FEATURE
+
+// global variables
+var GlobalCollapseState = "off";
+
+function collapseSDHelper(o, CollElementParent, disp, mode){
+    var CollElement = CollElementParent; /* ul/ol with lists, tbody with table */
+
+    if (CollElement.nodeName == "UL" || CollElement.nodeName == "OL"){
+        var CollName = "LI";
+    }else if (CollElement.nodeName == "TABLE"){
+        if (CollElement.querySelector('tbody')) {
+            /* tr modes are child nodes of tbody node */
+            CollElement = CollElement.querySelector('tbody');
+        }
+        var CollName = "TR";
+    }
+    
+    // get children (li for list and tr for table)
+    var children = CollElement.childNodes;
+
+    var nElements = 0;
+    for (var i=0;i<children.length;i++){
+        if (children[i].nodeName == CollName){
+            nElements = nElements + 1;
+            if (nElements > 5){
+                children[i].style.display = disp;
+            }
+        }
+    }
+    if (disp == "none"){
+        if (CollName == "LI"){
+            var text = " items)";
+        }else{
+            var text = " rows)";
+        }
+        
+        var textNode = document.createTextNode(("\u2228 More (" + (nElements-5) + text));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "on");
+
+        /* scroll to element if it is not visible */
+        if (mode == "single" && CollElement.offsetTop < document.documentElement.scrollTop){
+			CollElement.scrollIntoView();
+		}
+    }else{
+        var textNode = document.createTextNode(("\u2227 " + "Less"));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "off");
+    }
+}
+
+function collapseSD(o, ID){
+    var CollElement = document.getElementById(ID);
+    if (CollElement != null){
+        if (CollElement.getAttribute("dataCollapse") == "off"){
+            var disp="none";
+        }else{
+            var disp="";
+        }
+        collapseSDHelper(o, CollElement, disp, "single");
+    }
+}
+
+function collapseAllHelper(o, CollElement, CollInfo, disp){
+
+    if (CollElement != null){
+        var img = o.querySelector("img");
+        if (disp == "none"){
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }else{
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+
+        if (CollInfo != null){
+            if (disp == "none"){
+                CollInfo.style.display = "";
+            }else{
+                CollInfo.style.display = "none";
+            }
+        }
+    }
+}
+
+function collapseAll(o, ID, ID2){
+    var CollElement = document.getElementById(ID);
+    var CollInfo = document.getElementById(ID2);
+
+    if (CollElement.style.display == ""){
+        var disp = "none";
+    }else{
+        var disp = "";
+    }
+
+    collapseAllHelper(o, CollElement, CollInfo, disp);
+}
+
+function expandCollapseAll(o){
+	/* IE has no method for getting elements by class name. Use querySelectorAll instead 
+       Note: requires IE not to be in IE7 compatability mode */
+    var SDCollapse = document.querySelectorAll(".SystemdefinedCollapse");
+    var Button = null;
+
+    if (GlobalCollapseState == "off"){
+        var disp = "none";
+        GlobalCollapseState = "on";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Show check details";
+		}
+    }else{
+        var disp = "";
+        GlobalCollapseState = "off";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Hide check details";
+		}
+    }
+
+    for (var i=0;i<SDCollapse.length;i++){
+        Button = SDCollapse[i].nextSibling;
+        while(Button.nodeType !== 1){
+            Button = Button.nextSibling;
+        }
+        //Button = SDCollapse[i].parentNode.querySelector("span.SDCollapseControl");
+        collapseSDHelper(Button, SDCollapse[i], disp, "all");
+    }
+		
+    var AllCollapse = document.querySelectorAll(".AllCollapse");
+
+    for (i=0;i<AllCollapse.length;i++){
+        // get children of top level collapsible div
+        var children = AllCollapse[i].parentNode.children;
+        
+        // collapsible button is first child
+		Button = children[0];
+        
+        // get content to display in collapsed state
+        // this is optional and last child of collapsible div 
+        if (Button)
+        {
+            if (children.length>2)
+            {
+                collapseAllHelper(Button, AllCollapse[i], children[2], disp);
+            }
+            else
+            {
+                collapseAllHelper(Button, AllCollapse[i], null, disp);
+            }
+        }
+    }
+}
+
+
+function expandCollapseAllOnLoad(){
+    GlobalCollapseState = "on";
+    var Switch = document.getElementById("ExpandCollapseAll");
+    expandCollapseAll(Switch);
+}
+//END COLLAPSIBLE
+
+ --></script></head>  
+<body onload="updateHyperlink(); expandCollapseAllOnLoad();">  
+<span id="top">
+
+</span>
+<!-- mdladv_ignore_start --><div id="Container"><!-- mdladv_ignore_finish -->
+
+<!-- mdladv_ignore_start --><div id="ControlPanel">
+<div id="HidePanelControl" title="Minimize/Maximize control panel" onclick="hideControlPanel(this)" onmouseover="this.style.cursor='pointer'">
+<div id="HidePanelControlInner">
+&#9664;
+</div>
+</div>
+<div id="ControlsCheckFiltering">
+<h2>
+Filter checks
+</h2>
+<table id="CPFilteringTable" border="1">
+<tr>
+<td align="left" valign="top">
+<input id="Passed Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg==" /> Passed
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Failed Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC" /> Failed
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Warning Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC" /> Warning
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Not Run Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII=" /> Not Run
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Justified Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII=" /> Justified
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Information Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII=" /> Information
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Incomplete Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg==" /> Incomplete
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+
+</table>
+</div>
+<div id="TextFilter">
+<input id="TxtFilterInput" onkeyup="filterByText(event)" onfocus="if (this.value=='Search by check name'){ this.value=''; this.style.color='black';}" onblur="if (this.value==''){ this.value='Search by check name'; this.style.color='gray';}" value="Search by check name" type="text" title="Hide checks without keywords in their titles." />
+
+</div>
+<div id="ControlsTOC">
+<h2>
+Navigation
+</h2>
+<div id="TOCScrollableArea">
+<div class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('FolderControl_com.mathworks.HDL.FPGAImplementation')">
+ 4. FPGA Synthesis and Analysis</div>
+<div class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('FolderControl_com.mathworks.HDL.RunSynthesisTasks')">
+1 4.2. Perform Synthesis and P/R</div>
+</div>
+</div>
+<div id="ControlsView">
+<h2>
+View
+</h2>
+<div class="ControlPanelTextControl" title="Scroll to the top of the report" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('top')">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARAQMAAADqlG66AAAAA3NCSVQICAjb4U/gAAAABlBMVEX///9Tktdg+Ox4AAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAWdEVYdENyZWF0aW9uIFRpbWUAMTIvMTgvMDiz53+6AAAAGHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3NPsx9OAAAEEXRFWHRYTUw6Y29tLmFkb2JlLnhtcAA8P3hwYWNrZXQgYmVnaW49IiAgICIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA0LjEtYzAzNCA0Ni4yNzI5NzYsIFNhdCBKYW4gMjcgMjAwNyAyMjozNzozNyAgICAgICAgIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eGFwPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIj4KICAgICAgICAgPHhhcDpDcmVhdG9yVG9vbD5BZG9iZSBGaXJld29ya3MgQ1MzPC94YXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4YXA6Q3JlYXRlRGF0ZT4yMDA4LTEyLTE4VDIyOjA2OjAxWjwveGFwOkNyZWF0ZURhdGU+CiAgICAgICAgIDx4YXA6TW9kaWZ5RGF0ZT4yMDA4LTEyLTE4VDIyOjA4OjQzWjwveGFwOk1vZGlmeURhdGU+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA9F2ciAAAAIElEQVQImWNgQAP8f5A4BxgYGB8wMDB/YGBg/4EmhwAAvEcFqqXqgcsAAAAASUVORK5CYII="  id="CPToTopImg"/>Scroll to top</div>
+<div id="ExpandCollapseAll" class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="expandCollapseAll(this)" title="Expand/Collapse all collapsible check content.">
+Show check details</div>
+</div>
+</div>
+<!-- mdladv_ignore_finish -->
+<!-- mdladv_ignore_start --><div class="ReportContent" id="convolution_2D_v3/HDL_DUT"><!-- mdladv_ignore_finish --><table class="AdvTableNoBorder" width="100%" border="0">
+<tr>
+<td colspan="2" align="center">
+<b>
+Model Advisor Report - <font color="#800000">convolution_2D_v3.slx</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+Simulink version: <font color="#800000">24.2</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Model version: <font color="#800000">1.99</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+System: <font color="#800000">convolution_2D_v3/HDL_DUT</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Current run: <font color="#800000">27-May-2026 15:47:03</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<img src="info_icon.png" /> 1 item with a timestamp different than 27-May-2026 15:47:03
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+
+</table>
+<br /><font color="#800000"><b>Run Summary</b></font><br /><table class="AdvTableNoBorder" width="60%" border="0">
+<tr>
+<th align="left" valign="top">
+<b>
+Incomplete
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Failed
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Warning
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Justified
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Passed
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Information
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Not Run
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Total
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg=="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  /> 2
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  /> 2
+</td>
+<td align="left" valign="top">
+ 4
+</td>
+
+</tr>
+
+</table>
+
+<!-- mdladv_ignore_start --><br /><br /><font color="#800000"><b><!-- mdladv_ignore_start --><span class="FolderControl" id="FolderControl_com.mathworks.HDL.FPGAImplementation" onclick="MATableShrink(this,'com.mathworks.HDL.FPGAImplementation')" onmouseover="this.style.cursor = 'pointer'">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII="  /></span>
+<!-- mdladv_ignore_finish --> 4. FPGA Synthesis and Analysis</b></font><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "com.mathworks.HDL.FPGAImplementation"  id = "com.mathworks.HDL.FPGAImplementation" class="FolderContent"><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div class="EmptyFolderMessage" style="display:none;">
+All checks hidden.
+</div>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 10pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_30"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.CreateProject">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.CreateProject">
+4.1. Create Project</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_start --> (27-May-2026 15:34:32)<!-- mdladv_ignore_finish --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p /><font color="#C04C0B">
+Warning 
+</font>
+Downstream Integration:
+Current version 2025.2 of Xilinx Vivado tool on system path 
+may not be compatible with HDL Workflow Advisor. 
+The compatible version: 
+ Xilinx Vivado 2023.1. 
+Attempt to continue running Xilinx Vivado ... 
+<p /><font color="#009E0F">
+Passed
+</font>
+Create Project.<p />Task "Create Project" successful.<p />Generated logfile: <a href="matlab:edit('hdl_prj_convolution_2D_v3_double\hdlsrc\convolution_2D_v3\workflow_task_CreateProject.log')">hdl_prj_convolution_2D_v3_double\hdlsrc\convolution_2D_v3\workflow_task_CreateProject.log</a><p />****** Vivado v2025.2 (64-bit)<p />  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025<p />  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025<p />  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025<p />  **** Start of session at: Wed May 27 15:34:36 2026<p />    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.<p />    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.<p />source HDL_DUT_Xilinx_Vivado_run.tcl -notrace<p />### Create new Xilinx Vivado 2025.2 project <a href="matlab:downstream.handle('Model','convolution_2D_v3').openTargetTool;">hdl_prj_convolution_2D_v3_double\vivado_prj\HDL_DUT_vivado.xpr</a><p />INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.<p />Current project path is 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/vivado_prj'<p />create_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 555.461 ; gain = 221.273<p />### Set Xilinx Vivado 2025.2 project properties<p />### Update Xilinx Vivado 2025.2 project with HDL source files<p />WARNING: [Vivado 12-818] No files matched '*.tcl'<p />### Close Xilinx Vivado 2025.2 project.<p />INFO: [Common 17-206] Exiting Vivado at Wed May 27 15:35:14 2026...<p />Elapsed time is 41.1266 seconds.<p /><!-- mdladv_ignore_start --><!-- inputparam_section_start --><H5><b>
+Input Parameters Selection
+</b>
+</H5><table class="AdvTable" border="1">
+<tr>
+<th align="left" valign="top">
+<b>
+Name
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Project folder:
+</td>
+<td align="left" valign="top">
+hdl_prj_convolution_2D_v3_double\vivado_prj
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Synthesis objective:
+</td>
+<td align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Additional source files:
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Add Source...
+</td>
+<td align="left" valign="top">
+N/A
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Additional project creation Tcl files:
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Add Tcl...
+</td>
+<td align="left" valign="top">
+N/A
+</td>
+
+</tr>
+
+</table>
+<!-- inputparam_section_finish --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><br /><br /><font color="#800000"><b><!-- mdladv_ignore_start -->&#160; &#160; <span class="FolderControl" id="FolderControl_com.mathworks.HDL.RunSynthesisTasks" onclick="MATableShrink(this,'com.mathworks.HDL.RunSynthesisTasks')" onmouseover="this.style.cursor = 'pointer'">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII="  /></span>
+<!-- mdladv_ignore_finish -->1 4.2. Perform Synthesis and P/R</b></font><span class = "SubResultsSummary" id= "SubResults_com.mathworks.HDL.RunSynthesisTasks" >&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg=="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC"  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC"  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />1&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  />1</span>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "com.mathworks.HDL.RunSynthesisTasks"  id = "com.mathworks.HDL.RunSynthesisTasks" class="FolderContent"><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div class="EmptyFolderMessage" style="display:none;">
+All checks hidden.
+</div>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 20pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_34"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunVivadoSynthesis">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunVivadoSynthesis">
+4.2.1. Run Synthesis</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p /><font color="#009E0F">
+Passed
+</font>
+Synthesis<p />Parsed resource report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\convolution_2D\hdl_prj_convolution_2D_v3_double\vivado_prj\HDL_DUT_vivado.runs\synth_1\HDL_DUT_utilization_synth.rpt')">HDL_DUT_utilization_synth.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="4" align="left">
+<b>
+Resource summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+<b>
+Resource
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Usage
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Available
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Utilization (%)
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slice LUTs
+</td>
+<td align="left" valign="top">
+7704
+</td>
+<td align="left" valign="top">
+53200
+</td>
+<td align="left" valign="top">
+14.48
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slice Registers
+</td>
+<td align="left" valign="top">
+6561
+</td>
+<td align="left" valign="top">
+106400
+</td>
+<td align="left" valign="top">
+6.17
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+DSPs
+</td>
+<td align="left" valign="top">
+10
+</td>
+<td align="left" valign="top">
+220
+</td>
+<td align="left" valign="top">
+4.55
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Block RAM Tile
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+140
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+URAM
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+ 
+</td>
+
+</tr>
+
+</table>
+<p />Parsed timing report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\convolution_2D\hdl_prj_convolution_2D_v3_double\vivado_prj\timing_post_map.rpt')">timing_post_map.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="2" align="left">
+<b>
+Timing summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+&#160;
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Requirement
+</td>
+<td align="left" valign="top">
+10 ns (100 MHz)
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Data Path Delay
+</td>
+<td align="left" valign="top">
+17.911 ns
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slack
+</td>
+<td align="left" valign="top">
+-7.886 ns
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Clock Frequency
+</td>
+<td align="left" valign="top">
+55.91 MHz
+</td>
+
+</tr>
+
+</table>
+<p />WARNING: Timing constraints not met.<p /><pre>Generated Post Map Timing Report <a href="matlab:edit('hdl_prj_convolution_2D_v3_double\vivado_prj\timing_post_map.rpt')">hdl_prj_convolution_2D_v3_double\vivado_prj\timing_post_map.rpt</a>.
+Task "Run Synthesis" successful.
+Generated logfile: <a href="matlab:edit('hdl_prj_convolution_2D_v3_double\hdlsrc\convolution_2D_v3\workflow_task_RunSynthesis.log')">hdl_prj_convolution_2D_v3_double\hdlsrc\convolution_2D_v3\workflow_task_RunSynthesis.log</a>
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed May 27 15:47:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2025.2 project hdl_prj_convolution_2D_v3_double\vivado_prj\HDL_DUT_vivado.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/vivado_prj'
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/vivado_prj/HDL_DUT_vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 556.770 ; gain = 224.156
+### Running Synthesis in Xilinx Vivado 2025.2 ...
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Wed May 27 15:47:45 2026] Launched synth_1...
+Run output will be captured here: C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/vivado_prj/HDL_DUT_vivado.runs/synth_1/runme.log
+[Wed May 27 15:47:45 2026] Waiting for synth_1 to finish...
+*** Running vivado
+    with args -log HDL_DUT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDL_DUT.tcl
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed May 27 15:47:50 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT.tcl -notrace
+create_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 554.945 ; gain = 222.664
+Command: synth_design -top HDL_DUT -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5172
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1329.445 ; gain = 539.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'HDL_DUT' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/HDL_DUT.v:41]
+INFO: [Synth 8-6157] synthesizing module 'HDL_DUT_tc' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/HDL_DUT_tc.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'HDL_DUT_tc' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/HDL_DUT_tc.v:27]
+INFO: [Synth 8-6157] synthesizing module 'Convolution' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/Convolution.v:22]
+INFO: [Synth 8-6157] synthesizing module 'nfp_convert_sfix_32_En0_to_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_convert_sfix_32_En0_to_single.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_convert_sfix_32_En0_to_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_convert_sfix_32_En0_to_single.v:24]
+INFO: [Synth 8-6157] synthesizing module 'nfp_div_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_div_single.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_div_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_div_single.v:25]
+INFO: [Synth 8-6157] synthesizing module 'nfp_floor_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_floor_single.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_floor_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_floor_single.v:24]
+INFO: [Synth 8-6157] synthesizing module 'nfp_add_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_add_single.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_add_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_add_single.v:24]
+INFO: [Synth 8-6157] synthesizing module 'nfp_relop_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_relop_single.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_relop_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_relop_single.v:24]
+INFO: [Synth 8-6157] synthesizing module 'nfp_mod_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_mod_single.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_mod_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_mod_single.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/Convolution.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'HDL_DUT' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/HDL_DUT.v:41]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Delay2_out1_3_reg' and it is trimmed from '128' to '127' bits. [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/nfp_convert_sfix_32_En0_to_single.v:1941]
+WARNING: [Synth 8-6014] Unused sequential element intdelay2_reg_reg[0] was removed.  [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/Convolution.v:515]
+WARNING: [Synth 8-6014] Unused sequential element intdelay2_reg_reg[1] was removed.  [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/Convolution.v:515]
+WARNING: [Synth 8-6014] Unused sequential element intdelay2_reg_reg[2] was removed.  [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/Convolution.v:515]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1562.703 ; gain = 773.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1562.703 ; gain = 773.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1562.703 ; gain = 773.199
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1562.703 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/clock_constraint.xdc]
+Finished Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/clock_constraint.xdc]
+Completed Processing XDC Constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 1726.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+write_xdc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1750.305 ; gain = 23.422
+Constraint Validation Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1752.066 ; gain = 25.184
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1752.066 ; gain = 962.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1752.066 ; gain = 962.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1752.066 ; gain = 962.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 1752.066 ; gain = 962.562
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'u_Convolution/u_convolution_2D_v3_HDL_DUT_Convolution_nfp_convert_sfix_32_En0_to_single' (nfp_convert_sfix_32_En0_to_single) to 'u_Convolution/u_convolution_2D_v3_HDL_DUT_Convolution_nfp_convert_sfix_32_En0_to_single_1'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   31 Bit       Adders := 2     
+	   2 Input   28 Bit       Adders := 51    
+	   3 Input   28 Bit       Adders := 1     
+	   2 Input   27 Bit       Adders := 2     
+	   2 Input   26 Bit       Adders := 26    
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 4     
+	   3 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   3 Input   10 Bit       Adders := 5     
+	   2 Input   10 Bit       Adders := 18    
+	   2 Input    9 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 11    
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 10    
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	              128 Bit    Registers := 3     
+	               64 Bit    Registers := 696   
+	               60 Bit    Registers := 1     
+	               57 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               31 Bit    Registers := 3     
+	               30 Bit    Registers := 10    
+	               28 Bit    Registers := 112   
+	               27 Bit    Registers := 8     
+	               26 Bit    Registers := 49    
+	               25 Bit    Registers := 3     
+	               24 Bit    Registers := 13    
+	               23 Bit    Registers := 114   
+	               22 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               19 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 81    
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 194   
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 32    
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 107   
++---Multipliers : 
+	              64x64  Multipliers := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 25    
+	   2 Input   32 Bit        Muxes := 9     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   30 Bit        Muxes := 2     
+	   2 Input   28 Bit        Muxes := 69    
+	   2 Input   27 Bit        Muxes := 2     
+	   2 Input   26 Bit        Muxes := 26    
+	   2 Input   24 Bit        Muxes := 5     
+	   2 Input   23 Bit        Muxes := 21    
+	   3 Input   23 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 5     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 58    
+	   6 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 13    
+	   6 Input    5 Bit        Muxes := 9     
+	   4 Input    5 Bit        Muxes := 3     
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	   4 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 93    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: (PCIN&gt;&gt;17)+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: PCIN+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: (PCIN&gt;&gt;17)+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: PCIN+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: (PCIN&gt;&gt;17)+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: PCIN+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: PCIN+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: (PCIN&gt;&gt;17)+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: PCIN+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: (PCIN&gt;&gt;17)+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: PCIN+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: Generating DSP Multiply_Accumulate_multiply_out, operation Mode is: (PCIN&gt;&gt;17)+A*B.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+DSP Report: operator Multiply_Accumulate_multiply_out is absorbed into DSP Multiply_Accumulate_multiply_out.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:09 ; elapsed = 00:04:16 . Memory (MB): peak = 1752.066 ; gain = 962.562
+---------------------------------------------------------------------------------
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_0 : 0 0 : 3101 12442 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_0 : 0 1 : 3120 12442 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_0 : 0 2 : 3101 12442 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_0 : 0 3 : 3120 12442 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_4 : 0 0 : 3101 11782 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_4 : 0 1 : 3101 11782 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_4 : 0 2 : 2479 11782 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_4 : 0 3 : 3101 11782 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_6 : 0 0 : 3101 11141 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_6 : 0 1 : 2460 11141 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_6 : 0 2 : 2479 11141 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_6 : 0 3 : 3101 11141 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_8 : 0 0 : 2460 9675 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_8 : 0 1 : 2479 9675 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_8 : 0 2 : 2460 9675 : Used 1 time 100
+ Sort Area is HDL_DUT__GC0 Multiply_Accumulate_multiply_out_8 : 0 3 : 2276 9675 : Used 1 time 100
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|HDL_DUT     | A*B            | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | (PCIN&gt;&gt;17)+A*B | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B       | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | (PCIN&gt;&gt;17)+A*B | 14     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B       | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | (PCIN&gt;&gt;17)+A*B | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | (PCIN&gt;&gt;17)+A*B | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | (PCIN&gt;&gt;17)+A*B | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | (PCIN&gt;&gt;17)+A*B | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:36 ; elapsed = 00:04:45 . Memory (MB): peak = 1837.836 ; gain = 1048.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:06:38 ; elapsed = 00:06:55 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:07:23 ; elapsed = 00:07:42 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:37 ; elapsed = 00:07:56 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:37 ; elapsed = 00:07:57 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:40 ; elapsed = 00:08:00 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:40 ; elapsed = 00:08:00 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:42 ; elapsed = 00:08:02 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:42 ; elapsed = 00:08:02 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+Static Shift Register Report:
++------------+-----------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/modrem_12_Iterations_out2_reg[0]                                             | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay24_reg_reg[16][7]                                                       | 7      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay24_reg_reg[16][0]                                                       | 17     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/reduced_reg_4_reg[12][9]                                                     | 13     | 9     | YES          | NO                 | YES               | 9      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay10_out1_3_reg[23]                                                       | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay10_out1_3_reg[22]                                                       | 5      | 23    | YES          | NO                 | YES               | 23     | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay_reg_reg[12]                                                            | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay6_reg_reg[2]                                                            | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/reduced_reg_1_reg[11][0]                                                     | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay20_reg_reg[11]                                                          | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay19_reg_1_reg[11][22]                                                    | 12     | 23    | YES          | NO                 | YES               | 23     | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay18_reg_1_reg[11][7]                                                     | 12     | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/reduced_reg_reg[11][0]                                                       | 9      | 23    | YES          | NO                 | YES               | 23     | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/reduced_reg_1_reg[11][4]                                                     | 10     | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp_1/Delay18_reg_reg[7]                                                         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp_1/Delay2_reg_reg[3][0]                                                       | 4      | 7     | YES          | NO                 | YES               | 7      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp_1/Delay17_reg_reg[6][22]                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp_1/Delay17_reg_reg[6][21]                                                     | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp_1/Delay15_reg_reg[7][0]                                                      | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | delayMatch_reg_reg[510][63]                                                                               | 57     | 576   | YES          | NO                 | YES               | 0      | 1152    | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp/Delay18_reg_reg[7]                                                           | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp/Delay2_reg_reg[3][0]                                                         | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp/Delay17_reg_reg[6][22]                                                       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp/Delay17_reg_reg[6][21]                                                       | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp/Delay15_reg_reg[7][0]                                                        | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp/Delay14_reg_reg[7]                                                           | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_floor_comp/Delay_PS_3_out1_reg                                                        | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay8_reg_reg[24][7]                                                        | 25     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P7_1_out1_reg[22]                                                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P8_out1_reg[22]                                                        | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P9_1_out1_reg[22]                                                      | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P10_1_out1_reg[22]                                                     | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P11_1_out1_reg[22]                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P12_1_out1_reg[22]                                                     | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P13_1_out1_reg[22]                                                     | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P14_1_out1_reg[22]                                                     | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P15_1_out1_reg[22]                                                     | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P16_1_out1_reg[22]                                                     | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P17_1_out1_reg[22]                                                     | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P18_1_out1_reg[22]                                                     | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P19_1_out1_reg[22]                                                     | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P20_1_out1_reg[22]                                                     | 17     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P21_1_out1_reg[22]                                                     | 18     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P22_1_out1_reg[22]                                                     | 19     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P23_1_out1_reg[22]                                                     | 20     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P24_1_out1_reg[22]                                                     | 21     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P25_1_out1_reg[22]                                                     | 22     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P26_1_out1_reg[22]                                                     | 23     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay_P27_out1_reg[22]                                                       | 24     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[24]                                                        | 25     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[23]                                                        | 24     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[22]                                                        | 23     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[21]                                                        | 22     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[20]                                                        | 21     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[19]                                                        | 20     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[18]                                                        | 19     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[17]                                                        | 18     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[16]                                                        | 17     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[15]                                                        | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[14]                                                        | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[13]                                                        | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[12]                                                        | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[11]                                                        | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[10]                                                        | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[9]                                                         | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[8]                                                         | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[7]                                                         | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[6]                                                         | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[5]                                                         | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[4]                                                         | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay6_out1_1_reg[3]                                                         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay11_reg_reg[23][4]                                                       | 24     | 2     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay52_reg_reg[29]                                                          | 29     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay53_reg_reg[29]                                                          | 30     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay51_reg_reg[29]                                                          | 29     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay56_reg_reg[28][22]                                                      | 29     | 23    | YES          | NO                 | YES               | 0      | 23      | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay55_reg_reg[28][7]                                                       | 29     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|HDL_DUT     | u_Convolution/u_nfp_div_comp/Delay54_reg_reg[29]                                                          | 11     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_convolution_2D_v3_HDL_DUT_Convolution_nfp_convert_sfix_32_En0_to_single/Delay5_reg_reg[3] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/u_convolution_2D_v3_HDL_DUT_Convolution_nfp_convert_sfix_32_En0_to_single/Delay4_reg_reg[3] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_Convolution/delayMatch4_reg_reg[56]                                                                     | 57     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_Convolution/delayMatch1_reg_reg[279][63]                                                                | 46     | 64    | YES          | NO                 | YES               | 0      | 128     | 
+|HDL_DUT     | u_Convolution/delayMatch1_reg_reg[333][63]                                                                | 4      | 128   | YES          | NO                 | YES               | 128    | 0       | 
+|HDL_DUT     | u_Convolution/delayMatch3_reg_reg[90][63]                                                                 | 11     | 384   | YES          | NO                 | YES               | 384    | 0       | 
+|HDL_DUT     | u_Convolution/delayMatch3_reg_reg[39][63]                                                                 | 4      | 64    | YES          | NO                 | YES               | 64     | 0       | 
+|HDL_DUT     | u_Convolution/delayMatch3_reg_reg[93][63]                                                                 | 6      | 64    | YES          | NO                 | YES               | 64     | 0       | 
+|HDL_DUT     | u_Convolution/u_nfp_mod_comp/Delay2_reg_reg[18]                                                           | 21     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_Convolution/u_nfp_add_comp_1/Delay15_reg_reg[4][4]                                                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+-----------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|HDL_DUT     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B     | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN&gt;&gt;17+A*B | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B     | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN&gt;&gt;17+A*B | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B     | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN&gt;&gt;17+A*B | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HDL_DUT     | PCIN+A*B     | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   573|
+|2     |DSP48E1 |    10|
+|3     |LUT1    |   172|
+|4     |LUT2    |  2568|
+|5     |LUT3    |   601|
+|6     |LUT4    |   578|
+|7     |LUT5    |   644|
+|8     |LUT6    |  2404|
+|9     |MUXF7   |     2|
+|10    |SRL16E  |   848|
+|11    |SRLC32E |  1340|
+|12    |FDCE    |  5010|
+|13    |FDPE    |     4|
+|14    |FDRE    |  1547|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:42 ; elapsed = 00:08:02 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:06:12 ; elapsed = 00:07:06 . Memory (MB): peak = 2283.715 ; gain = 1304.848
+Synthesis Optimization Complete : Time (s): cpu = 00:07:42 ; elapsed = 00:08:04 . Memory (MB): peak = 2283.715 ; gain = 1494.211
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.569 . Memory (MB): peak = 2283.715 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 585 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2283.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+Synth Design complete | Checksum: 696d0d25
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:08:04 ; elapsed = 00:08:32 . Memory (MB): peak = 2283.715 ; gain = 1728.770
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 2283.715 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/vivado_prj/HDL_DUT_vivado.runs/synth_1/HDL_DUT.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file HDL_DUT_utilization_synth.rpt -pb HDL_DUT_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 27 15:57:00 2026...
+[Wed May 27 15:57:04 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:09:20 . Memory (MB): peak = 564.457 ; gain = 0.000
+### Synthesis Complete.
+### Running PostMapTiming in Xilinx Vivado 2025.2 ...
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.287 . Memory (MB): peak = 817.562 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 585 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/clock_constraint.xdc]
+Finished Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/convolution_2D/hdl_prj_convolution_2D_v3_double/hdlsrc/convolution_2D_v3/clock_constraint.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 971.332 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 971.332 ; gain = 406.875
+WARNING: [Common 17-708] report_timing_summary: The '-name' option will be ignored because it is only relevant in GUI mode.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 1555.031 ; gain = 583.699
+### PostMapTiming Complete.
+### Close Xilinx Vivado 2025.2 project.
+INFO: [Common 17-206] Exiting Vivado at Wed May 27 15:58:05 2026...
+Elapsed time is 663.4767 seconds.
+</pre><!-- mdladv_ignore_start --><!-- inputparam_section_start --><H5><b>
+Input Parameters Selection
+</b>
+</H5><table class="AdvTable" border="1">
+<tr>
+<th align="left" valign="top">
+<b>
+Name
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Skip pre-route timing analysis
+</td>
+<td align="left" valign="top">
+false
+</td>
+
+</tr>
+
+</table>
+<!-- inputparam_section_finish --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Not Run Check" id = "Not Run Check" class="NotRunCheck" style="margin-left: 20pt;"> <!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_35"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunImplementation">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunImplementation">
+4.2.2. Run Implementation</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p />Not Run<!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Not Run Check" id = "Not Run Check" class="NotRunCheck" style="margin-left: 10pt;"> <!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_36"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.AnnotateModel">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAA0klEQVR42mN8+PAhAymAkWQNqzf0EK/azDAUpAFIIYv+//8HxoIy/jMyfPx0d+3q4+bm5ugasKpm+Pfn45eHKBouX74MlNPR0WT4z3Dl6nU0l2hrK378/BDdBoTZYOMhBsMFcNvAwHDlChE2gIz/DwwzhOsRFgIF/6PaYGoQCDFVR1sV5Idrt9Fs0NKU/fT1KZIG/UCI2f8ZQKYy/gcbDzYYKvifAVWDQSBI5t8fqDY4A6wfog1Fg6qSFjHRjNBw6exHIpMGSAMw8UHClEhAcmoFACLZqO1i9O7+AAAAAElFTkSuQmCC" />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.AnnotateModel">
+4.3. Annotate Model with Synthesis Result</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p />Not Run<!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish -->
+
+</div>
+</div><span name = "EmbedImages" id="EmbedImages"></span>
+</body>  
+</html>  

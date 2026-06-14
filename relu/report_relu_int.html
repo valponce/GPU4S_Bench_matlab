@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Model Advisor Report for 'relu_int/HDL_DUT'</title>  
+<style type="text/css">
+<!--
+@media screen {    
+    /* Table Formatting */
+    .AdvTable th { 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+    }
+}
+
+@media all {
+    *{ font-family: sans-serif; }
+
+	H3 {
+		font-size: 14pt;
+		font-weight: 200;
+	}
+	H4 {
+		font-size: 9pt;
+		font-weight: normal;
+	}
+	H5 {
+		font-size: 12pt;
+		font-style: italic;
+		font-weight: bold;
+		color: #333333;
+		margin-bottom: 2px;
+	}
+	a[href] {
+		color: #005FCE;
+	}
+	.subsection {
+		padding-left: 30px;
+	}
+    
+    .CheckHeading {
+		font-size:1.05em;
+		font-weight:bold;
+	}
+
+    /* Table Formatting */
+    table.AdvTable { 
+        border-collapse:collapse; border:1px solid #ececec; border-right:none; border-bottom:none; 
+    }
+
+    .AdvTable th { 
+        padding-left:5px; 
+        padding-right:5px; 
+        color:#fff; 
+        line-height:120%; 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+        border-right: 1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+
+    .AdvTable td { 
+        padding-left:5px; 
+        padding-right:5px; 
+        border-right:1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+    
+    .AdvTable th p { 
+        margin-bottom:0px; 
+    }
+
+    .AdvTable p { 
+        margin-bottom:10px; 
+    }
+    
+    .AdvTableNoBorder p { 
+        margin-bottom:10px; 
+    }
+
+    table+span.SDCollapseControl { 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    ul+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em;
+        font-weight:bold; 
+    }
+
+    ol+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    .SystemdefinedCollapse { 
+        margin-top:0px;
+        margin-bottom:5px; 
+    }
+
+    div.AllCollapse p, div.AllCollapse table, div.AllCollapse ol, div.AllCollapse ul { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px;
+    }
+
+    div.AllCollapse + div { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px; 
+    }
+
+    img.CollapseAllControlImage { 
+        float:left; 
+    }
+
+    .SubResultsSummary {
+        padding-left:30px;
+    }
+
+    .EmptyFolderMessage {
+        color:gray;
+        margin:10px 0 0 30px;
+        font-size:0.8em;
+    }
+	
+    .CsEml-Symbol-Status-Pass
+    { 
+        color: green;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Warn
+        { 
+        color: orange;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Fail
+    { 
+        color: red;
+        font-family: monospace;
+    }
+    
+    .CsEml-Line-Number
+    {
+        color: #A0A0A0;
+        font-style: italic;
+        font-family: monospace;
+    }
+
+    .CsEml-Code
+    {
+        color: blue;
+        font-family: monospace;
+    }
+
+    .CsEml-Code-Fragment
+    {
+        color: blue;
+        font-weight: bold;
+        font-family: monospace;
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .CsEml-Function-Type
+    {
+        color:       #A0A0A0;
+        font-style:  italic;
+        font-family: monospace;
+    }
+
+}
+-->
+</style>
+
+<style type="text/css">
+/* Copyright 2013-2023 The MathWorks, Inc. */
+<!--
+@media screen {
+    #Container {
+        overflow-x:hidden;
+    }
+
+	#ControlPanel {
+		position: fixed;
+		top: 5px;
+		left: 10px;
+		bottom: 5px;
+		width: 210px;
+		padding: 2px 0 2px 2px;
+		border: 1px solid #EEEEEE;
+		font-family: sans-serif;
+		font-size: 0.85em;
+	}
+
+	#HidePanelControl {
+		position:absolute;
+		top:0;
+		left:204px;
+		width:8px;
+		height:100%;
+		font-size: 8px;
+	}
+	
+	#HidePanelControl:hover {
+		background-color: #EFEFFB;
+	}
+	
+	#HidePanelControlInner {
+		position:absolute; top:50%;
+	}
+
+	#ControlsCheckFiltering {
+		position:absolute;
+		top:2px;
+		border: 1px solid #ececec;
+		padding-bottom: 8px;
+		margin-top: 0;
+		margin-bottom:0;
+		height:190px;
+		width:200px;
+	}
+
+	#TextFilter{
+		position:absolute;
+		top:202px;
+		padding-top:5px;
+        margin-left:12px;  
+	}
+		
+	#ControlsTOC {
+		position: absolute;
+		top:242px;
+		bottom:130px;
+		margin-top: 0;
+		margin-bottom: 0;
+		width:200px;
+		border: 1px solid #ececec;
+	}
+	
+	#ControlsView {
+		position:absolute;
+		bottom:2px;
+		width:200px;
+		margin-top: 0;
+		margin-bottom: 0;
+		height:110px;
+		border: 1px solid #ececec;
+	}
+	
+	#TOCScrollableArea {
+		position:absolute;
+		top:30px;
+		bottom:0;
+		width:100%;
+		padding-bottom:5px;
+		overflow:auto;
+	}
+	
+	#ControlsCheckFiltering input[type=checkbox] { margin-right: 15px; }
+	
+	#ControlPanel h2 {
+		margin: 0 0 10px 0;
+		background-color: #ECECEC;
+		font-size: 1em;
+		font-weight: normal;
+		color: #333333;
+		padding: 2px 5px 1px 5px;
+		height:20px;
+	}
+
+	.ControlPanelTextControl a[href] {
+		text-decoration: none;
+		font-weight: normal;
+		color: #F6F6F6;
+	}
+	
+	.ControlPanelTextControl {
+		line-height: 160%;
+		font-weight: normal;
+		color: #005FCE;
+		margin: 0 0 0 5px;
+		padding-right:15px;
+        padding-left:18px;
+        text-indent:-18px;
+	}
+	
+	.ControlPanelTextControl:hover {
+		background-color: #EFEFFB;
+	}
+	
+	#TxtFilterInput {
+		width: 170px;
+		color: gray;
+	}
+
+	#CPFilteringTable {
+        margin-left:5px;
+        width:165px;
+        border: none;
+    }
+
+    #CPFilteringTable td { border: none; }
+
+    #CPToTopImg { position:relative; top:3px; width:18px; height:17px; }
+    #CPCollapseImg { position:relative; top:2px; width:16px; height:16px; margin-right:3px; }
+
+	.ReportContent { margin-left: 225px; }
+}
+
+@media print {
+	#ControlPanel {
+		display: none;
+	}
+
+    #ShowPanelControl{
+		display:none;
+    }
+    
+    .ReportContent { margin-left: 0px; }
+}
+-->
+
+</style>
+
+<script type="text/javascript"> <!-- /* Copyright 2013-2017 The MathWorks, Inc */
+/* define String.trim() method if not defined (used by filterByText() function) */
+if(!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g,'');
+  };
+}
+
+// rtwreport needs it 
+function init() {
+    var showFailed = document.getElementById("Failed Checkbox");
+    var showPassed = document.getElementById("Passed Checkbox");
+    var showWarning = document.getElementById("Warning Checkbox");
+    var showNotRun = document.getElementById("Not Run Checkbox");
+    var showJustified = document.getElementById("Justified Checkbox");
+    var showIncomplete = document.getElementById("Incomplete Checkbox");      
+    
+    urlQueryStringRegexp = RegExp('\\?(.*)').exec(window.location.search);
+
+    if (urlQueryStringRegexp == null) {
+        /* refresh check boxes and search input */
+        showFailed.checked = true;
+        showPassed.checked = true;
+        showWarning.checked = true;
+        showNotRun.checked = true;
+        showJustified.checked = true;
+        showIncomplete.checked = true;
+    }
+    else 
+    {
+        showFailed.checked = false;
+        showPassed.checked = false;
+        showWarning.checked = false;
+        showNotRun.checked = false;
+        
+        urlQueryString = urlQueryStringRegexp[1];
+        
+        var queryArgs = [];
+        
+        if (urlQueryString.indexOf("&") == -1)
+        {
+            // Only 1 argument
+            queryArgs[0] = urlQueryString;
+        }
+        else
+        {
+            queryArgs = urlQueryString.split("&");
+        }
+        
+        for (var idx = 0; idx < queryArgs.length; ++idx)
+        {
+            // get in
+            if (queryArgs[idx].localeCompare("showPassedChecks") == 0) 
+            {
+                showPassed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showWarningChecks") == 0) 
+            {
+                showWarning.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showFailedChecks") == 0)
+            {
+                showFailed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showNotRunChecks") == 0)
+            {
+                showNotRun.checked = true;
+            }
+        }
+            
+        // if nothing is selected, select everything
+        if (!showFailed.checked && !showPassed.checked && 
+            !showWarning.checked && !showNotRun.checked) 
+        {
+            showFailed.checked = true;
+            showPassed.checked = true;
+            showWarning.checked = true;
+            showNotRun.checked = true;
+            showJustified.checked = true;
+            showIncomplete.checked = true;
+        }
+    }
+    
+    updateVisibleChecks();
+}
+
+function markEmptyFolders(){
+	var nodeTypes = ["FailedCheck","PassedCheck",  "WarningCheck", "NotRunCheck"];
+	var folderArray = document.querySelectorAll("div.FolderContent");
+	
+	for (var n=0;n<folderArray.length;n++){
+		/* get direct check result children and check visibility */
+		var childNodes = folderArray[n].childNodes;
+		var noneVisible = true;
+		var noChecksInFolder = true;
+		
+		for (var ni=0;ni<childNodes.length;ni++){
+			if (childNodes[ni].nodeType == 1 && childNodes[ni].tagName.toLowerCase() == "div"){
+				if (childNodes[ni].className == nodeTypes[0] || childNodes[ni].className == nodeTypes[1] || childNodes[ni].className == nodeTypes[2] || childNodes[ni].className == nodeTypes[3]){
+					noChecksInFolder = false;
+					if (childNodes[ni].style.display != "none"){
+						noneVisible = false;
+                        break;
+					}
+				}
+			}
+		}
+		
+		/* Only display hidden message if any checks inside the folders and not just other folders */
+		if (!noChecksInFolder){
+			var hiddenMessage = folderArray[n].querySelector("div.EmptyFolderMessage");
+			
+			if (hiddenMessage && noneVisible == true){
+				hiddenMessage.style.display = "";
+			}else if (hiddenMessage && noneVisible == false){
+				hiddenMessage.style.display = "none";
+			}else{
+				/* hidden message not found */
+			}
+		}
+	}
+
+    return;
+}
+
+function updateVisibleChecks( /* show all flags */ checkbox ){
+	
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox", "Justified Checkbox", "Incomplete Checkbox"];
+	var nodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check", "Justified Check", "Incomplete Check"];
+	var textInput = document.getElementById("TxtFilterInput");
+	
+	
+	if (checkbox && textInput && textInput.color=="gray"){
+		var checkType = checkbox.id;
+		var ind = checkboxes.indexOf(checkType);
+		var nodes = document.getElementsByName(nodeTypes[ind]);
+		for (i = 0; i < nodes.length;i++){
+		    nodes[i].style.display = checkbox.checked ? "" : "none";
+		}
+	}
+	else{ /* Update all checks if called from init or if a previous text filter was applied */
+		for (i = 0; i < checkboxes.length; i++){
+			
+			  var show = document.getElementById(checkboxes[i]).checked ? "" : "none";
+			  var nodes = document.getElementsByName(nodeTypes[i]);
+			  for(j = 0; j < nodes.length; j++){
+				  nodes[j].style.display = show;
+			  }
+		   
+		}
+	}
+
+    /* clear text search */
+	if (textInput && checkbox){
+		textInput.value = "Search by check name";
+        textInput.style.color = "gray";
+        textInput.blur;
+	}
+
+    markEmptyFolders();
+
+    return; 
+}
+
+function filterByText(ev){
+	// get all the nodes
+	var allNodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check"];
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox"];
+	var nodeTypes = [];
+	
+	// get nodes depending on filter selections
+	for (var n=0; n<checkboxes.length; n++){
+		var checkbox = document.getElementById(checkboxes[n]);
+		if (checkbox && checkbox.checked){
+			nodeTypes.push(allNodeTypes[n]);
+		}
+	}
+	
+    var searchNodes = [".CheckHeading"];
+    var allnodes = [];
+	var alltext = [];
+	if (!ev) return;
+	var target = ev.target ? ev.target : window.event.srcElement;
+	var searchString = target.value;
+	
+	if (!searchString){
+        updateVisibleChecks();  // clear all and display by other filters
+	}else{
+		for (i = 0; i < nodeTypes.length; i++){
+			var nodes = document.getElementsByName(nodeTypes[i]);
+			for (j = 0; j < nodes.length; j++){
+				// get text from check heading
+				var checkContent = nodes[j].querySelector(searchNodes).innerHTML;
+				// creaet a regular expression to ignore case
+				var ss = new RegExp(searchString.trim(), "i");
+				if (ss.exec(checkContent)){
+				   nodes[j].style.display = "";
+				}else{
+				   nodes[j].style.display = "none";
+				}
+			}
+		}
+        markEmptyFolders();
+	}	
+}
+
+
+function MATableShrink(o,tagNameStr){
+    var temp = document.getElementsByName(tagNameStr);
+    var classUsed = document.getElementsByName('EmbedImages'); 
+    var embeddedMode = !(classUsed.length == 0);
+    var img = o.querySelector("img");
+
+    if (temp[0].style.display == "") 
+    {
+        temp[0].style.display = "none";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }
+        else
+        {
+            img.src = "plus.png";
+        }
+    } 
+    else 
+    {
+        temp[0].style.display = "";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+        else
+        {
+            img.src = "minus.png";
+        }
+    }
+}
+
+// rtwreport needs it 
+function updateHyperlink() {
+    docObj = window.document;
+    loc = document.location;
+    var aHash = "";
+    var externalweb = "false";
+    if (loc.search || loc.hash) {
+        if (loc.search)
+            aHash = loc.search.substring(1);
+        else
+            aHash = loc.hash.substring(1);
+    }    
+    var args = new Array();
+    args = aHash.split('&');
+    for (var i = 0; i < args.length; ++i) {
+        var arg = args[i];
+          sep = arg.indexOf('=');
+        if (sep != -1) {
+            var cmd = arg.substring(0,sep);
+            var opt = arg.substring(sep+1);
+            switch (cmd.toLowerCase()) {
+            case "externalweb":
+                externalweb = opt;
+                break;
+            }
+        }
+    }        
+    if (externalweb === "true") {        
+        var objs = docObj.getElementsByTagName("a");
+        if (objs.length > 0 && objs[0].removeAttribute) {
+            for (var i = 0; i < objs.length; ++i) {           
+                if (objs[i].href.indexOf('matlab') > -1)           
+                    objs[i].removeAttribute("href");                
+            }
+        }
+    }
+    init();
+}
+    
+function findParentNode(e) {
+   var parent = e.parentElement;
+   if (!!parent) {
+    if (parent.id == "") {   
+       return findParentNode(parent);
+    } else {
+       return parent;
+    }
+   } else {
+    return null;
+   }
+}
+
+function expandParentNode(e) {
+   var parent = findParentNode(e);
+   while (!!parent) { 
+    var prefix = "FolderControl_";
+    var folderControl = document.getElementById(prefix.concat(parent.id));
+    if (parent.style.display == "none") {       
+       MATableShrink(folderControl,parent.id);
+    }
+    parent = findParentNode(parent);
+   }
+}
+
+function isHidden(e) {
+    return (e.offsetParent === null)
+}
+
+function navigateToElement(eleID) {
+   var e = document.getElementById(eleID);
+   if (isHidden(e)) {
+       expandParentNode(e);
+   }       
+   if (!!e && e.scrollIntoView) {
+       e.scrollIntoView();
+   }
+}
+
+function setTextContent(element, value) {
+    var content = element.textContent;
+    if (value === undefined) return;
+    
+    if (content !== undefined) element.textContent = value;
+    else element.innerText = value;
+}
+
+function hideControlPanel(control){
+	var panelComponents = ["ControlsCheckFiltering", "ControlsView", "ControlsTOC"];
+	var reportContent = document.querySelector(".ReportContent");
+	var controlPanel = document.getElementById("ControlPanel");
+	var isHidden = false;
+	
+    if (reportContent && control && controlPanel) {
+    	for (var n=0; n<panelComponents.length; n++){
+			var component = document.getElementById(panelComponents[n]);
+			
+			if (component && component.style.display == ""){
+				component.style.display = "none";
+            } else if (component && component.style.display == "none"){
+				component.style.display = "";
+			}
+		}
+		
+		if (controlPanel.style.width != "6px"){
+			reportContent.style.marginLeft = "25px";
+	    	controlPanel.style.width = "6px";
+	    	control.style.left = "0px";
+	       	var innerDiv = control.querySelector("#HidePanelControlInner");
+	       	setTextContent(innerDiv, "\u25BA");
+	    } else {
+	    	reportContent.style.marginLeft = "225px";
+        	controlPanel.style.width = "210px";
+        	control.style.left = "204px";
+        	var innerDiv = control.querySelector("#HidePanelControlInner");
+        	setTextContent(innerDiv, "\u25C0");
+        }
+    }
+}
+/* Copyright 2013 The MathWorks, Inc. */
+//COLLAPSIBLE FEATURE
+
+// global variables
+var GlobalCollapseState = "off";
+
+function collapseSDHelper(o, CollElementParent, disp, mode){
+    var CollElement = CollElementParent; /* ul/ol with lists, tbody with table */
+
+    if (CollElement.nodeName == "UL" || CollElement.nodeName == "OL"){
+        var CollName = "LI";
+    }else if (CollElement.nodeName == "TABLE"){
+        if (CollElement.querySelector('tbody')) {
+            /* tr modes are child nodes of tbody node */
+            CollElement = CollElement.querySelector('tbody');
+        }
+        var CollName = "TR";
+    }
+    
+    // get children (li for list and tr for table)
+    var children = CollElement.childNodes;
+
+    var nElements = 0;
+    for (var i=0;i<children.length;i++){
+        if (children[i].nodeName == CollName){
+            nElements = nElements + 1;
+            if (nElements > 5){
+                children[i].style.display = disp;
+            }
+        }
+    }
+    if (disp == "none"){
+        if (CollName == "LI"){
+            var text = " items)";
+        }else{
+            var text = " rows)";
+        }
+        
+        var textNode = document.createTextNode(("\u2228 More (" + (nElements-5) + text));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "on");
+
+        /* scroll to element if it is not visible */
+        if (mode == "single" && CollElement.offsetTop < document.documentElement.scrollTop){
+			CollElement.scrollIntoView();
+		}
+    }else{
+        var textNode = document.createTextNode(("\u2227 " + "Less"));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "off");
+    }
+}
+
+function collapseSD(o, ID){
+    var CollElement = document.getElementById(ID);
+    if (CollElement != null){
+        if (CollElement.getAttribute("dataCollapse") == "off"){
+            var disp="none";
+        }else{
+            var disp="";
+        }
+        collapseSDHelper(o, CollElement, disp, "single");
+    }
+}
+
+function collapseAllHelper(o, CollElement, CollInfo, disp){
+
+    if (CollElement != null){
+        var img = o.querySelector("img");
+        if (disp == "none"){
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }else{
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+
+        if (CollInfo != null){
+            if (disp == "none"){
+                CollInfo.style.display = "";
+            }else{
+                CollInfo.style.display = "none";
+            }
+        }
+    }
+}
+
+function collapseAll(o, ID, ID2){
+    var CollElement = document.getElementById(ID);
+    var CollInfo = document.getElementById(ID2);
+
+    if (CollElement.style.display == ""){
+        var disp = "none";
+    }else{
+        var disp = "";
+    }
+
+    collapseAllHelper(o, CollElement, CollInfo, disp);
+}
+
+function expandCollapseAll(o){
+	/* IE has no method for getting elements by class name. Use querySelectorAll instead 
+       Note: requires IE not to be in IE7 compatability mode */
+    var SDCollapse = document.querySelectorAll(".SystemdefinedCollapse");
+    var Button = null;
+
+    if (GlobalCollapseState == "off"){
+        var disp = "none";
+        GlobalCollapseState = "on";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Show check details";
+		}
+    }else{
+        var disp = "";
+        GlobalCollapseState = "off";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Hide check details";
+		}
+    }
+
+    for (var i=0;i<SDCollapse.length;i++){
+        Button = SDCollapse[i].nextSibling;
+        while(Button.nodeType !== 1){
+            Button = Button.nextSibling;
+        }
+        //Button = SDCollapse[i].parentNode.querySelector("span.SDCollapseControl");
+        collapseSDHelper(Button, SDCollapse[i], disp, "all");
+    }
+		
+    var AllCollapse = document.querySelectorAll(".AllCollapse");
+
+    for (i=0;i<AllCollapse.length;i++){
+        // get children of top level collapsible div
+        var children = AllCollapse[i].parentNode.children;
+        
+        // collapsible button is first child
+		Button = children[0];
+        
+        // get content to display in collapsed state
+        // this is optional and last child of collapsible div 
+        if (Button)
+        {
+            if (children.length>2)
+            {
+                collapseAllHelper(Button, AllCollapse[i], children[2], disp);
+            }
+            else
+            {
+                collapseAllHelper(Button, AllCollapse[i], null, disp);
+            }
+        }
+    }
+}
+
+
+function expandCollapseAllOnLoad(){
+    GlobalCollapseState = "on";
+    var Switch = document.getElementById("ExpandCollapseAll");
+    expandCollapseAll(Switch);
+}
+//END COLLAPSIBLE
+
+ --></script></head>  
+<body onload="updateHyperlink(); expandCollapseAllOnLoad();">  
+<span id="top">
+
+</span>
+<!-- mdladv_ignore_start --><div id="Container"><!-- mdladv_ignore_finish -->
+
+<!-- mdladv_ignore_start --><div id="ControlPanel">
+<div id="HidePanelControl" title="Minimize/Maximize control panel" onclick="hideControlPanel(this)" onmouseover="this.style.cursor='pointer'">
+<div id="HidePanelControlInner">
+&#9664;
+</div>
+</div>
+<div id="ControlsCheckFiltering">
+<h2>
+Filter checks
+</h2>
+<table id="CPFilteringTable" border="1">
+<tr>
+<td align="left" valign="top">
+<input id="Passed Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg==" /> Passed
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Failed Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC" /> Failed
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Warning Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC" /> Warning
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Not Run Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII=" /> Not Run
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Justified Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII=" /> Justified
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Information Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII=" /> Information
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Incomplete Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg==" /> Incomplete
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+
+</table>
+</div>
+<div id="TextFilter">
+<input id="TxtFilterInput" onkeyup="filterByText(event)" onfocus="if (this.value=='Search by check name'){ this.value=''; this.style.color='black';}" onblur="if (this.value==''){ this.value='Search by check name'; this.style.color='gray';}" value="Search by check name" type="text" title="Hide checks without keywords in their titles." />
+
+</div>
+<div id="ControlsTOC">
+<h2>
+Navigation
+</h2>
+<div id="TOCScrollableArea">
+<div class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('FolderControl_com.mathworks.HDL.FPGAImplementation')">
+ 4. FPGA Synthesis and Analysis</div>
+<div class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('FolderControl_com.mathworks.HDL.RunSynthesisTasks')">
+1 4.2. Perform Synthesis and P/R</div>
+</div>
+</div>
+<div id="ControlsView">
+<h2>
+View
+</h2>
+<div class="ControlPanelTextControl" title="Scroll to the top of the report" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('top')">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARAQMAAADqlG66AAAAA3NCSVQICAjb4U/gAAAABlBMVEX///9Tktdg+Ox4AAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAWdEVYdENyZWF0aW9uIFRpbWUAMTIvMTgvMDiz53+6AAAAGHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3NPsx9OAAAEEXRFWHRYTUw6Y29tLmFkb2JlLnhtcAA8P3hwYWNrZXQgYmVnaW49IiAgICIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA0LjEtYzAzNCA0Ni4yNzI5NzYsIFNhdCBKYW4gMjcgMjAwNyAyMjozNzozNyAgICAgICAgIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eGFwPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIj4KICAgICAgICAgPHhhcDpDcmVhdG9yVG9vbD5BZG9iZSBGaXJld29ya3MgQ1MzPC94YXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4YXA6Q3JlYXRlRGF0ZT4yMDA4LTEyLTE4VDIyOjA2OjAxWjwveGFwOkNyZWF0ZURhdGU+CiAgICAgICAgIDx4YXA6TW9kaWZ5RGF0ZT4yMDA4LTEyLTE4VDIyOjA4OjQzWjwveGFwOk1vZGlmeURhdGU+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA9F2ciAAAAIElEQVQImWNgQAP8f5A4BxgYGB8wMDB/YGBg/4EmhwAAvEcFqqXqgcsAAAAASUVORK5CYII="  id="CPToTopImg"/>Scroll to top</div>
+<div id="ExpandCollapseAll" class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="expandCollapseAll(this)" title="Expand/Collapse all collapsible check content.">
+Show check details</div>
+</div>
+</div>
+<!-- mdladv_ignore_finish -->
+<!-- mdladv_ignore_start --><div class="ReportContent" id="relu_int/HDL_DUT"><!-- mdladv_ignore_finish --><table class="AdvTableNoBorder" width="100%" border="0">
+<tr>
+<td colspan="2" align="center">
+<b>
+Model Advisor Report - <font color="#800000">relu_int.slx</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+Simulink version: <font color="#800000">24.2</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Model version: <font color="#800000">1.13</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+System: <font color="#800000">relu_int/HDL_DUT</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Current run: <font color="#800000">10-May-2026 12:32:13</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<img src="info_icon.png" /> 2 items with a timestamp different than 10-May-2026 12:32:13
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+
+</table>
+<br /><font color="#800000"><b>Run Summary</b></font><br /><table class="AdvTableNoBorder" width="60%" border="0">
+<tr>
+<th align="left" valign="top">
+<b>
+Incomplete
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Failed
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Warning
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Justified
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Passed
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Information
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Not Run
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Total
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg=="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  /> 3
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  /> 1
+</td>
+<td align="left" valign="top">
+ 4
+</td>
+
+</tr>
+
+</table>
+
+<!-- mdladv_ignore_start --><br /><br /><font color="#800000"><b><!-- mdladv_ignore_start --><span class="FolderControl" id="FolderControl_com.mathworks.HDL.FPGAImplementation" onclick="MATableShrink(this,'com.mathworks.HDL.FPGAImplementation')" onmouseover="this.style.cursor = 'pointer'">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII="  /></span>
+<!-- mdladv_ignore_finish --> 4. FPGA Synthesis and Analysis</b></font><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "com.mathworks.HDL.FPGAImplementation"  id = "com.mathworks.HDL.FPGAImplementation" class="FolderContent"><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div class="EmptyFolderMessage" style="display:none;">
+All checks hidden.
+</div>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 10pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_30"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.CreateProject">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.CreateProject">
+4.1. Create Project</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_start --> (10-May-2026 12:26:24)<!-- mdladv_ignore_finish --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p /><font color="#C04C0B">
+Warning 
+</font>
+Downstream Integration:
+Current version 2025.2 of Xilinx Vivado tool on system path 
+may not be compatible with HDL Workflow Advisor. 
+The compatible version: 
+ Xilinx Vivado 2023.1. 
+Attempt to continue running Xilinx Vivado ... 
+<p /><font color="#009E0F">
+Passed
+</font>
+Create Project.<p />Task "Create Project" successful.<p />Generated logfile: <a href="matlab:edit('hdl_prj\hdlsrc\relu_int\workflow_task_CreateProject.log')">hdl_prj\hdlsrc\relu_int\workflow_task_CreateProject.log</a><p />****** Vivado v2025.2 (64-bit)<p />  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025<p />  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025<p />  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025<p />  **** Start of session at: Sun May 10 12:26:27 2026<p />    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.<p />    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.<p />source HDL_DUT_Xilinx_Vivado_run.tcl -notrace<p />### Open existing Xilinx Vivado 2025.2 project <a href="matlab:downstream.handle('Model','relu_int').openTargetTool;">hdl_prj\vivado_prj\HDL_DUT_vivado.xpr</a><p />INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.gen/sources_1'.<p />Scanning sources...<p />Finished scanning sources<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available<p />WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available<p />WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build <p />open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 558.258 ; gain = 223.781<p />### Set Xilinx Vivado 2025.2 project properties<p />### Update Xilinx Vivado 2025.2 project with HDL source files<p />WARNING: [Vivado 12-818] No files matched '*.tcl'<p />### Close Xilinx Vivado 2025.2 project.<p />INFO: [Common 17-206] Exiting Vivado at Sun May 10 12:26:58 2026...<p />Elapsed time is 33.722 seconds.<p /><!-- mdladv_ignore_start --><!-- inputparam_section_start --><H5><b>
+Input Parameters Selection
+</b>
+</H5><table class="AdvTable" border="1">
+<tr>
+<th align="left" valign="top">
+<b>
+Name
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Project folder:
+</td>
+<td align="left" valign="top">
+hdl_prj\vivado_prj
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Synthesis objective:
+</td>
+<td align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Additional source files:
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Add Source...
+</td>
+<td align="left" valign="top">
+N/A
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Additional project creation Tcl files:
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Add Tcl...
+</td>
+<td align="left" valign="top">
+N/A
+</td>
+
+</tr>
+
+</table>
+<!-- inputparam_section_finish --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><br /><br /><font color="#800000"><b><!-- mdladv_ignore_start -->&#160; &#160; <span class="FolderControl" id="FolderControl_com.mathworks.HDL.RunSynthesisTasks" onclick="MATableShrink(this,'com.mathworks.HDL.RunSynthesisTasks')" onmouseover="this.style.cursor = 'pointer'">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII="  /></span>
+<!-- mdladv_ignore_finish -->1 4.2. Perform Synthesis and P/R</b></font><span class = "SubResultsSummary" id= "SubResults_com.mathworks.HDL.RunSynthesisTasks" >&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg=="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC"  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC"  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />2&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  />0</span>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "com.mathworks.HDL.RunSynthesisTasks"  id = "com.mathworks.HDL.RunSynthesisTasks" class="FolderContent"><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div class="EmptyFolderMessage" style="display:none;">
+All checks hidden.
+</div>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 20pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_34"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunVivadoSynthesis">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunVivadoSynthesis">
+4.2.1. Run Synthesis</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_start --> (10-May-2026 12:27:07)<!-- mdladv_ignore_finish --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p /><font color="#009E0F">
+Passed
+</font>
+Synthesis<p />Parsed resource report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\hdl_prj\vivado_prj\HDL_DUT_vivado.runs\synth_1\HDL_DUT_utilization_synth.rpt')">HDL_DUT_utilization_synth.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="4" align="left">
+<b>
+Resource summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+<b>
+Resource
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Usage
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Available
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Utilization (%)
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+CLB LUTs
+</td>
+<td align="left" valign="top">
+48
+</td>
+<td align="left" valign="top">
+44000
+</td>
+<td align="left" valign="top">
+0.11
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+CLB Registers
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+88000
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+DSPs
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+400
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Block RAM Tile
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+100
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+URAM
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+ 
+</td>
+
+</tr>
+
+</table>
+<p />Parsed timing report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\hdl_prj\vivado_prj\timing_post_map.rpt')">timing_post_map.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="2" align="left">
+<b>
+Timing summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+&#160;
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Requirement
+</td>
+<td align="left" valign="top">
+10 ns (100 MHz)
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Data Path Delay
+</td>
+<td align="left" valign="top">
+0.791 ns
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slack
+</td>
+<td align="left" valign="top">
+ 
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Clock Frequency
+</td>
+<td align="left" valign="top">
+0.00 MHz
+</td>
+
+</tr>
+
+</table>
+<p /><pre>Generated Post Map Timing Report <a href="matlab:edit('hdl_prj\vivado_prj\timing_post_map.rpt')">hdl_prj\vivado_prj\timing_post_map.rpt</a>.
+Task "Run Synthesis" successful.
+Generated logfile: <a href="matlab:edit('hdl_prj\hdlsrc\relu_int\workflow_task_RunSynthesis.log')">hdl_prj\hdlsrc\relu_int\workflow_task_RunSynthesis.log</a>
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun May 10 12:27:09 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2025.2 project hdl_prj\vivado_prj\HDL_DUT_vivado.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 555.426 ; gain = 222.875
+### Running Synthesis in Xilinx Vivado 2025.2 ...
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun May 10 12:27:37 2026] Launched synth_1...
+Run output will be captured here: C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/synth_1/runme.log
+[Sun May 10 12:27:37 2026] Waiting for synth_1 to finish...
+*** Running vivado
+    with args -log HDL_DUT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDL_DUT.tcl
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun May 10 12:27:41 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 555.117 ; gain = 221.277
+Command: synth_design -top HDL_DUT -part xcau10p-ffvb676-1-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcau10p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau10p'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13172
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1094.418 ; gain = 532.371
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'HDL_DUT' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/hdlsrc/relu_int/HDL_DUT.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'HDL_DUT' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/hdlsrc/relu_int/HDL_DUT.v:29]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1212.188 ; gain = 650.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1212.188 ; gain = 650.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcau10p-ffvb676-1-e
+INFO: [Device 21-403] Loading part xcau10p-ffvb676-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1212.188 ; gain = 650.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1212.188 ; gain = 650.141
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 400 (col length:72)
+BRAMs: 200 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1611.988 ; gain = 1049.941
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1627.824 ; gain = 1065.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1627.824 ; gain = 1065.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     2|
+|2     |LUT2   |    32|
+|3     |LUT3   |    32|
++------+-------+------+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    66|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1867.109 ; gain = 1305.062
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1880.133 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1934.023 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+Synth Design complete | Checksum: e96043b0
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:02 . Memory (MB): peak = 1934.023 ; gain = 1378.906
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1934.023 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/synth_1/HDL_DUT.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1934.023 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file HDL_DUT_utilization_synth.rpt -pb HDL_DUT_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 10 12:29:22 2026...
+[Sun May 10 12:29:27 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:01:52 . Memory (MB): peak = 562.977 ; gain = 0.000
+### Synthesis Complete.
+### Running PostMapTiming in Xilinx Vivado 2025.2 ...
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xcau10p-ffvb676-1-e
+INFO: [Device 21-403] Loading part xcau10p-ffvb676-1-e
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1006.484 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1149.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1153.840 ; gain = 590.863
+WARNING: [Common 17-708] report_timing_summary: The '-name' option will be ignored because it is only relevant in GUI mode.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2323.156 ; gain = 1169.316
+### PostMapTiming Complete.
+### Close Xilinx Vivado 2025.2 project.
+INFO: [Common 17-206] Exiting Vivado at Sun May 10 12:30:12 2026...
+Elapsed time is 188.1561 seconds.
+</pre><!-- mdladv_ignore_start --><!-- inputparam_section_start --><H5><b>
+Input Parameters Selection
+</b>
+</H5><table class="AdvTable" border="1">
+<tr>
+<th align="left" valign="top">
+<b>
+Name
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Skip pre-route timing analysis
+</td>
+<td align="left" valign="top">
+false
+</td>
+
+</tr>
+
+</table>
+<!-- inputparam_section_finish --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 20pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_35"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunImplementation">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunImplementation">
+4.2.2. Run Implementation</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p /><font color="#009E0F">
+Passed
+</font>
+Implementation.<p />Parsed resource report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\hdl_prj\vivado_prj\HDL_DUT_vivado.runs\impl_1\HDL_DUT_utilization_placed.rpt')">HDL_DUT_utilization_placed.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="4" align="left">
+<b>
+Resource summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+<b>
+Resource
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Usage
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Available
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Utilization (%)
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+CLB LUTs
+</td>
+<td align="left" valign="top">
+48
+</td>
+<td align="left" valign="top">
+44000
+</td>
+<td align="left" valign="top">
+0.11
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+CLB Registers
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+88000
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+DSPs
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+400
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Block RAM Tile
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+100
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+URAM
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+ 
+</td>
+
+</tr>
+
+</table>
+<p />Parsed timing report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\hdl_prj\vivado_prj\timing_post_route.rpt')">timing_post_route.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="2" align="left">
+<b>
+Timing summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+&#160;
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Requirement
+</td>
+<td align="left" valign="top">
+10 ns (100 MHz)
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Data Path Delay
+</td>
+<td align="left" valign="top">
+0.907 ns
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slack
+</td>
+<td align="left" valign="top">
+ 
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Clock Frequency
+</td>
+<td align="left" valign="top">
+0.00 MHz
+</td>
+
+</tr>
+
+</table>
+<p /><pre>Generated Post Route Timing Report <a href="matlab:edit('hdl_prj\vivado_prj\timing_post_route.rpt')">hdl_prj\vivado_prj\timing_post_route.rpt</a>.
+Task "Run Implementation" successful.
+Generated logfile: <a href="matlab:edit('hdl_prj\hdlsrc\relu_int\workflow_task_RunImplementation.log')">hdl_prj\hdlsrc\relu_int\workflow_task_RunImplementation.log</a>
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun May 10 12:32:15 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2025.2 project hdl_prj\vivado_prj\HDL_DUT_vivado.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 557.238 ; gain = 223.547
+### Running Implementation in Xilinx Vivado 2025.2 ...
+[Sun May 10 12:32:43 2026] Launched impl_1...
+Run output will be captured here: C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/runme.log
+[Sun May 10 12:32:44 2026] Waiting for impl_1 to finish...
+*** Running vivado
+    with args -log HDL_DUT.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source HDL_DUT.tcl -notrace
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun May 10 12:32:52 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT.tcl -notrace
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 554.336 ; gain = 220.496
+Command: link_design -top HDL_DUT -part xcau10p-ffvb676-1-e -mode out_of_context
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcau10p-ffvb676-1-e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1004.742 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1025.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1147.934 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1151.918 ; gain = 597.582
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau10p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau10p'
+Running DRC as a precondition to command opt_design
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1181.906 ; gain = 29.988
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1e070b73f
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1434.254 ; gain = 252.348
+Starting Logic Optimization Task
+Phase 1 Initialization
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 1e070b73f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1896.090 ; gain = 0.000
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1e070b73f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1896.090 ; gain = 0.000
+Phase 1 Initialization | Checksum: 1e070b73f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1896.090 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 1e070b73f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 1e070b73f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1e070b73f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1e070b73f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Retarget | Checksum: 1e070b73f
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 1e070b73f
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Constant propagation | Checksum: 1e070b73f
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 5 Sweep | Checksum: 16e9727ac
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.166 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Sweep | Checksum: 16e9727ac
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+Phase 6 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 6 BUFG optimization | Checksum: 16e9727ac
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.193 . Memory (MB): peak = 1896.102 ; gain = 0.012
+BUFG optimization | Checksum: 16e9727ac
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 16e9727ac
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.198 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Shift Register Optimization | Checksum: 16e9727ac
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 16e9727ac
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.202 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Post Processing Netlist | Checksum: 16e9727ac
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Phase 9 Finalization
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 26a391881
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.259 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Phase 9.2 Verifying Netlist Connectivity
+Starting Connectivity Check Task
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 26a391881
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.284 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Phase 9 Finalization | Checksum: 26a391881
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.285 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Opt_design Change Summary
+=========================
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+Ending Logic Optimization Task | Checksum: 26a391881
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1896.102 ; gain = 0.012
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period &lt; 2.00 ns.
+Ending Power Optimization Task | Checksum: 26a391881
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 26a391881
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1896.102 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1896.102 ; gain = 744.184
+INFO: [Vivado 12-24828] Executing command : report_drc -file HDL_DUT_drc_opted.rpt -pb HDL_DUT_drc_opted.pb -rpx HDL_DUT_drc_opted.rpx
+Command: report_drc -file HDL_DUT_drc_opted.rpt -pb HDL_DUT_drc_opted.pb -rpx HDL_DUT_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/valen/AMD_vivado/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/HDL_DUT_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.102 ; gain = 0.000
+generate_parallel_reports: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1896.102 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1896.102 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/HDL_DUT_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau10p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau10p'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+Starting Placer Task
+Phase 1 Placer Initialization
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 16b6bb774
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 16b6bb774
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.202 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 20ce01a88
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 20ce01a88
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 20ce01a88
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 2 Global Placement
+Phase 2.1 Floorplanning
+Phase 2.1.1 Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 20ce01a88
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 2.1.1.2 PBP: Clock Region Placement
+INFO: [Place 30-3164] Check ILP status : ILP-based clock placer is skipped.
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 20ce01a88
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1896.102 ; gain = 0.000
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 20ce01a88
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1964.754 ; gain = 68.652
+Phase 2.1.1.4 PBP: Add part constraints
+Phase 2.1.1.4 PBP: Add part constraints | Checksum: 20ce01a88
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1964.754 ; gain = 68.652
+Phase 2.1.1 Partition Driven Placement | Checksum: 20ce01a88
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1964.754 ; gain = 68.652
+Phase 2.1 Floorplanning | Checksum: 20ce01a88
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1964.754 ; gain = 68.652
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 20ce01a88
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1964.754 ; gain = 68.652
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 20ce01a88
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1964.754 ; gain = 68.652
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 1e7ca1ad8
+Time (s): cpu = 00:04:25 ; elapsed = 00:02:30 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 2.5 Global Place Phase2
+WARNING: [Place 46-29] Timing had been disabled during Placer and, therefore, physical synthesis in Placer will be skipped.
+Phase 2.5 Global Place Phase2 | Checksum: 21264ff28
+Time (s): cpu = 00:04:42 ; elapsed = 00:02:40 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 2 Global Placement | Checksum: 21264ff28
+Time (s): cpu = 00:04:42 ; elapsed = 00:02:40 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 3 Detail Placement
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 21264ff28
+Time (s): cpu = 00:05:02 ; elapsed = 00:02:52 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 3.2 Commit Most Macros &amp; LUTRAMs
+Phase 3.2 Commit Most Macros &amp; LUTRAMs | Checksum: 2db88224a
+Time (s): cpu = 00:05:02 ; elapsed = 00:02:52 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 3.3 Small Shape DP
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 2bbd02d6b
+Time (s): cpu = 00:05:43 ; elapsed = 00:03:15 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 3.3.2 Slice Area Swap
+Phase 3.3.2.1 Slice Area Swap Initial
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 264ff403b
+Time (s): cpu = 00:06:04 ; elapsed = 00:03:26 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 3.3.2 Slice Area Swap | Checksum: 264ff403b
+Time (s): cpu = 00:06:04 ; elapsed = 00:03:26 . Memory (MB): peak = 2016.953 ; gain = 120.852
+Phase 3.3 Small Shape DP | Checksum: 285ff6507
+Time (s): cpu = 00:06:50 ; elapsed = 00:26:36 . Memory (MB): peak = 2020.125 ; gain = 124.023
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 285ff6507
+Time (s): cpu = 00:06:53 ; elapsed = 00:26:40 . Memory (MB): peak = 2020.125 ; gain = 124.023
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 285ff6507
+Time (s): cpu = 00:06:53 ; elapsed = 00:26:40 . Memory (MB): peak = 2020.125 ; gain = 124.023
+Phase 3 Detail Placement | Checksum: 285ff6507
+Time (s): cpu = 00:06:53 ; elapsed = 00:26:40 . Memory (MB): peak = 2020.125 ; gain = 124.023
+Phase 4 Post Placement Optimization and Clean-Up
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: 285ff6507
+Time (s): cpu = 00:07:21 ; elapsed = 00:26:56 . Memory (MB): peak = 2020.125 ; gain = 124.023
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 285ff6507
+Time (s): cpu = 00:07:58 ; elapsed = 00:36:44 . Memory (MB): peak = 2030.543 ; gain = 134.441
+Phase 4.3 Placer Reporting
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+Phase 4.3.1 Print Estimated Congestion | Checksum: 285ff6507
+Time (s): cpu = 00:07:58 ; elapsed = 00:36:44 . Memory (MB): peak = 2030.543 ; gain = 134.441
+Phase 4.3 Placer Reporting | Checksum: 285ff6507
+Time (s): cpu = 00:07:58 ; elapsed = 00:36:44 . Memory (MB): peak = 2030.543 ; gain = 134.441
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2030.543 ; gain = 0.000
+Time (s): cpu = 00:07:58 ; elapsed = 00:36:44 . Memory (MB): peak = 2030.543 ; gain = 134.441
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 285ff6507
+Time (s): cpu = 00:07:58 ; elapsed = 00:36:44 . Memory (MB): peak = 2030.543 ; gain = 134.441
+Ending Placer Task | Checksum: 1f223592c
+Time (s): cpu = 00:07:58 ; elapsed = 00:36:44 . Memory (MB): peak = 2030.543 ; gain = 134.441
+46 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:08:02 ; elapsed = 00:36:46 . Memory (MB): peak = 2030.543 ; gain = 134.441
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file HDL_DUT_utilization_placed.rpt -pb HDL_DUT_utilization_placed.pb
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file HDL_DUT_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2030.543 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_io -file HDL_DUT_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.681 . Memory (MB): peak = 2030.543 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2030.543 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2030.543 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2030.543 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.216 . Memory (MB): peak = 2030.746 ; gain = 0.203
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.291 . Memory (MB): peak = 2030.746 ; gain = 0.203
+INFO: [Common 17-1381] The checkpoint 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/HDL_DUT_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau10p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau10p'
+Starting Initial Update Timing Task
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2030.746 ; gain = 0.000
+INFO: [Vivado_Tcl 4-235] No timing constraint found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+54 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2030.746 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 2030.746 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/HDL_DUT_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcau10p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau10p'
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Phase 1 Build RT Design
+Checksum: PlaceDB: 86b7a1b8 ConstDB: 0 ShapeSum: ec58693a RouteDB: 7f134e3a
+Nodegraph reading from file.  Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2034.996 ; gain = 4.215
+WARNING: [Route 35-198] Port "A[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "A[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "A[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "B[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "B[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Post Restoration Checksum: NetGraph: a68e1cf9 | NumContArr: da02dc7b | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 305e2eeae
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2034.996 ; gain = 4.250
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 305e2eeae
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2034.996 ; gain = 4.250
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 305e2eeae
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2034.996 ; gain = 4.250
+Phase 2.3 Global Clock Net Routing
+Phase 2.3 Global Clock Net Routing | Checksum: 305e2eeae
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2038.270 ; gain = 7.523
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 3
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 1
+  Number of Partially Routed Nets     = 2
+  Number of Node Overlaps             = 0
+Phase 2 Router Initialization | Checksum: 305e2eeae
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 305e2eeae
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 4 Initial Routing
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 20191de35
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 4 Initial Routing | Checksum: 20191de35
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 5 Rip-up And Reroute
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 0
+Phase 5.1 Global Iteration 0 | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 5 Rip-up And Reroute | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 6 Delay and Skew Optimization
+Phase 6 Delay and Skew Optimization | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 7 Post Hold Fix
+Phase 7.1 Hold Fix Iter
+Phase 7.1 Hold Fix Iter | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 7 Post Hold Fix | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 8 Route finalize
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.000145685 %
+  Global Horizontal Routing Utilization  = 7.51563e-05 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 1x1 Area, Max Cong = 0.469484%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 0.473934%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 0.961538%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 0%, No Congested Regions.
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Phase 8 Route finalize | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 9 Verifying routed nets
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 286f91f73
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 11 Resolve XTalk
+Skipping xtalk assignment for non timing driven mode.
+Phase 11 Resolve XTalk | Checksum: 286f91f73
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Phase 12 Post Process Routing
+Phase 12 Post Process Routing | Checksum: 286f91f73
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Time taken to check if laguna hold fix is required (in secs): 0.001
+Skip PhysOpt in Router because non-negative WNS value: 1e+30 .
+Total Elapsed time in route_design: 10.384 secs
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 136261f68
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 136261f68
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2038.453 ; gain = 7.707
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+60 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2038.453 ; gain = 7.707
+INFO: [Vivado 12-24828] Executing command : report_drc -file HDL_DUT_drc_routed.rpt -pb HDL_DUT_drc_routed.pb -rpx HDL_DUT_drc_routed.rpx
+Command: report_drc -file HDL_DUT_drc_routed.rpt -pb HDL_DUT_drc_routed.pb -rpx HDL_DUT_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/HDL_DUT_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2061.105 ; gain = 22.652
+INFO: [Vivado 12-24828] Executing command : report_methodology -file HDL_DUT_methodology_drc_routed.rpt -pb HDL_DUT_methodology_drc_routed.pb -rpx HDL_DUT_methodology_drc_routed.rpx
+Command: report_methodology -file HDL_DUT_methodology_drc_routed.rpt -pb HDL_DUT_methodology_drc_routed.pb -rpx HDL_DUT_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/HDL_DUT_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2061.105 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file HDL_DUT_timing_summary_routed.rpt -pb HDL_DUT_timing_summary_routed.pb -rpx HDL_DUT_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file HDL_DUT_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file HDL_DUT_route_status.rpt -pb HDL_DUT_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file HDL_DUT_power_routed.rpt -pb HDL_DUT_power_summary_routed.pb -rpx HDL_DUT_power_routed.rpx
+Command: report_power -file HDL_DUT_power_routed.rpt -pb HDL_DUT_power_summary_routed.pb -rpx HDL_DUT_power_routed.rpx
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+Finished Running Vector-less Activity Propagation
+77 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2061.105 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file HDL_DUT_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2061.105 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file HDL_DUT_bus_skew_routed.rpt -pb HDL_DUT_bus_skew_routed.pb -rpx HDL_DUT_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+generate_parallel_reports: Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 2061.105 ; gain = 22.652
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2061.105 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2061.105 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2061.105 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2061.105 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2061.105 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2061.105 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 2061.105 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/hdl_prj/vivado_prj/HDL_DUT_vivado.runs/impl_1/HDL_DUT_routed.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Sun May 10 13:11:52 2026...
+[Sun May 10 13:11:59 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:39:16 . Memory (MB): peak = 564.246 ; gain = 0.000
+### Implementation Complete.
+### Running PostPARTiming in Xilinx Vivado 2025.2 ...
+INFO: [Device 21-403] Loading part xcau10p-ffvb676-1-e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1006.023 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1027.492 ; gain = 0.000
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1053.242 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1053.242 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1053.242 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1053.242 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1053.242 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 1053.242 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.304 . Memory (MB): peak = 1053.242 ; gain = 25.121
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1152.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1152.973 ; gain = 588.727
+WARNING: [Common 17-708] report_timing_summary: The '-name' option will be ignored because it is only relevant in GUI mode.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1423.883 ; gain = 270.910
+### PostPARTiming Complete.
+### Close Xilinx Vivado 2025.2 project.
+INFO: [Common 17-206] Exiting Vivado at Sun May 10 13:12:36 2026...
+Elapsed time is 2425.5167 seconds.
+</pre><!-- mdladv_ignore_start --><!-- inputparam_section_start --><H5><b>
+Input Parameters Selection
+</b>
+</H5><table class="AdvTable" border="1">
+<tr>
+<th align="left" valign="top">
+<b>
+Name
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Skip this task
+</td>
+<td align="left" valign="top">
+false
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Ignore place and route errors
+</td>
+<td align="left" valign="top">
+false
+</td>
+
+</tr>
+
+</table>
+<!-- inputparam_section_finish --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Not Run Check" id = "Not Run Check" class="NotRunCheck" style="margin-left: 10pt;"> <!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_36"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.AnnotateModel">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.AnnotateModel">
+4.3. Annotate Model with Synthesis Result</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p />Not Run<!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish -->
+
+</div>
+</div><span name = "EmbedImages" id="EmbedImages"></span>
+</body>  
+</html>  

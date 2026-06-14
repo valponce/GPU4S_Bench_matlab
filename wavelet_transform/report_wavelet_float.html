@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Model Advisor Report for 'wavelet_transform_float/HDL_DUT'</title>  
+<style type="text/css">
+<!--
+@media screen {    
+    /* Table Formatting */
+    .AdvTable th { 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+    }
+}
+
+@media all {
+    *{ font-family: sans-serif; }
+
+	H3 {
+		font-size: 14pt;
+		font-weight: 200;
+	}
+	H4 {
+		font-size: 9pt;
+		font-weight: normal;
+	}
+	H5 {
+		font-size: 12pt;
+		font-style: italic;
+		font-weight: bold;
+		color: #333333;
+		margin-bottom: 2px;
+	}
+	a[href] {
+		color: #005FCE;
+	}
+	.subsection {
+		padding-left: 30px;
+	}
+    
+    .CheckHeading {
+		font-size:1.05em;
+		font-weight:bold;
+	}
+
+    /* Table Formatting */
+    table.AdvTable { 
+        border-collapse:collapse; border:1px solid #ececec; border-right:none; border-bottom:none; 
+    }
+
+    .AdvTable th { 
+        padding-left:5px; 
+        padding-right:5px; 
+        color:#fff; 
+        line-height:120%; 
+        background:#80a0c1 url(data:image/gif;base64,R0lGODlhAQAaAKIAAHSRr3mXtn+fv2V/mX2cvG2JpVxzi4CgwSH5BAAAAAAALAAAAAABABoAAAMJeLrcLCSAMkwCADs=) repeat-x bottom left; 
+        border-right: 1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+
+    .AdvTable td { 
+        padding-left:5px; 
+        padding-right:5px; 
+        border-right:1px solid #ececec; 
+        border-bottom: 1px solid #ececec; 
+    }
+    
+    .AdvTable th p { 
+        margin-bottom:0px; 
+    }
+
+    .AdvTable p { 
+        margin-bottom:10px; 
+    }
+    
+    .AdvTableNoBorder p { 
+        margin-bottom:10px; 
+    }
+
+    table+span.SDCollapseControl { 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    ul+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em;
+        font-weight:bold; 
+    }
+
+    ol+span.SDCollapseControl { 
+        margin-left:25px; 
+        font-size:0.8em; 
+        font-weight:bold; 
+    }
+
+    .SystemdefinedCollapse { 
+        margin-top:0px;
+        margin-bottom:5px; 
+    }
+
+    div.AllCollapse p, div.AllCollapse table, div.AllCollapse ol, div.AllCollapse ul { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px;
+    }
+
+    div.AllCollapse + div { 
+        margin-top:0pt;
+        margin-bottom:0pt; 
+        margin-left:18px; 
+    }
+
+    img.CollapseAllControlImage { 
+        float:left; 
+    }
+
+    .SubResultsSummary {
+        padding-left:30px;
+    }
+
+    .EmptyFolderMessage {
+        color:gray;
+        margin:10px 0 0 30px;
+        font-size:0.8em;
+    }
+	
+    .CsEml-Symbol-Status-Pass
+    { 
+        color: green;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Warn
+        { 
+        color: orange;
+        font-family: monospace;
+    }
+
+    .CsEml-Symbol-Status-Fail
+    { 
+        color: red;
+        font-family: monospace;
+    }
+    
+    .CsEml-Line-Number
+    {
+        color: #A0A0A0;
+        font-style: italic;
+        font-family: monospace;
+    }
+
+    .CsEml-Code
+    {
+        color: blue;
+        font-family: monospace;
+    }
+
+    .CsEml-Code-Fragment
+    {
+        color: blue;
+        font-weight: bold;
+        font-family: monospace;
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .CsEml-Function-Type
+    {
+        color:       #A0A0A0;
+        font-style:  italic;
+        font-family: monospace;
+    }
+
+}
+-->
+</style>
+
+<style type="text/css">
+/* Copyright 2013-2023 The MathWorks, Inc. */
+<!--
+@media screen {
+    #Container {
+        overflow-x:hidden;
+    }
+
+	#ControlPanel {
+		position: fixed;
+		top: 5px;
+		left: 10px;
+		bottom: 5px;
+		width: 210px;
+		padding: 2px 0 2px 2px;
+		border: 1px solid #EEEEEE;
+		font-family: sans-serif;
+		font-size: 0.85em;
+	}
+
+	#HidePanelControl {
+		position:absolute;
+		top:0;
+		left:204px;
+		width:8px;
+		height:100%;
+		font-size: 8px;
+	}
+	
+	#HidePanelControl:hover {
+		background-color: #EFEFFB;
+	}
+	
+	#HidePanelControlInner {
+		position:absolute; top:50%;
+	}
+
+	#ControlsCheckFiltering {
+		position:absolute;
+		top:2px;
+		border: 1px solid #ececec;
+		padding-bottom: 8px;
+		margin-top: 0;
+		margin-bottom:0;
+		height:190px;
+		width:200px;
+	}
+
+	#TextFilter{
+		position:absolute;
+		top:202px;
+		padding-top:5px;
+        margin-left:12px;  
+	}
+		
+	#ControlsTOC {
+		position: absolute;
+		top:242px;
+		bottom:130px;
+		margin-top: 0;
+		margin-bottom: 0;
+		width:200px;
+		border: 1px solid #ececec;
+	}
+	
+	#ControlsView {
+		position:absolute;
+		bottom:2px;
+		width:200px;
+		margin-top: 0;
+		margin-bottom: 0;
+		height:110px;
+		border: 1px solid #ececec;
+	}
+	
+	#TOCScrollableArea {
+		position:absolute;
+		top:30px;
+		bottom:0;
+		width:100%;
+		padding-bottom:5px;
+		overflow:auto;
+	}
+	
+	#ControlsCheckFiltering input[type=checkbox] { margin-right: 15px; }
+	
+	#ControlPanel h2 {
+		margin: 0 0 10px 0;
+		background-color: #ECECEC;
+		font-size: 1em;
+		font-weight: normal;
+		color: #333333;
+		padding: 2px 5px 1px 5px;
+		height:20px;
+	}
+
+	.ControlPanelTextControl a[href] {
+		text-decoration: none;
+		font-weight: normal;
+		color: #F6F6F6;
+	}
+	
+	.ControlPanelTextControl {
+		line-height: 160%;
+		font-weight: normal;
+		color: #005FCE;
+		margin: 0 0 0 5px;
+		padding-right:15px;
+        padding-left:18px;
+        text-indent:-18px;
+	}
+	
+	.ControlPanelTextControl:hover {
+		background-color: #EFEFFB;
+	}
+	
+	#TxtFilterInput {
+		width: 170px;
+		color: gray;
+	}
+
+	#CPFilteringTable {
+        margin-left:5px;
+        width:165px;
+        border: none;
+    }
+
+    #CPFilteringTable td { border: none; }
+
+    #CPToTopImg { position:relative; top:3px; width:18px; height:17px; }
+    #CPCollapseImg { position:relative; top:2px; width:16px; height:16px; margin-right:3px; }
+
+	.ReportContent { margin-left: 225px; }
+}
+
+@media print {
+	#ControlPanel {
+		display: none;
+	}
+
+    #ShowPanelControl{
+		display:none;
+    }
+    
+    .ReportContent { margin-left: 0px; }
+}
+-->
+
+</style>
+
+<script type="text/javascript"> <!-- /* Copyright 2013-2017 The MathWorks, Inc */
+/* define String.trim() method if not defined (used by filterByText() function) */
+if(!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g,'');
+  };
+}
+
+// rtwreport needs it 
+function init() {
+    var showFailed = document.getElementById("Failed Checkbox");
+    var showPassed = document.getElementById("Passed Checkbox");
+    var showWarning = document.getElementById("Warning Checkbox");
+    var showNotRun = document.getElementById("Not Run Checkbox");
+    var showJustified = document.getElementById("Justified Checkbox");
+    var showIncomplete = document.getElementById("Incomplete Checkbox");      
+    
+    urlQueryStringRegexp = RegExp('\\?(.*)').exec(window.location.search);
+
+    if (urlQueryStringRegexp == null) {
+        /* refresh check boxes and search input */
+        showFailed.checked = true;
+        showPassed.checked = true;
+        showWarning.checked = true;
+        showNotRun.checked = true;
+        showJustified.checked = true;
+        showIncomplete.checked = true;
+    }
+    else 
+    {
+        showFailed.checked = false;
+        showPassed.checked = false;
+        showWarning.checked = false;
+        showNotRun.checked = false;
+        
+        urlQueryString = urlQueryStringRegexp[1];
+        
+        var queryArgs = [];
+        
+        if (urlQueryString.indexOf("&") == -1)
+        {
+            // Only 1 argument
+            queryArgs[0] = urlQueryString;
+        }
+        else
+        {
+            queryArgs = urlQueryString.split("&");
+        }
+        
+        for (var idx = 0; idx < queryArgs.length; ++idx)
+        {
+            // get in
+            if (queryArgs[idx].localeCompare("showPassedChecks") == 0) 
+            {
+                showPassed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showWarningChecks") == 0) 
+            {
+                showWarning.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showFailedChecks") == 0)
+            {
+                showFailed.checked = true;
+            }
+            else if (queryArgs[idx].localeCompare("showNotRunChecks") == 0)
+            {
+                showNotRun.checked = true;
+            }
+        }
+            
+        // if nothing is selected, select everything
+        if (!showFailed.checked && !showPassed.checked && 
+            !showWarning.checked && !showNotRun.checked) 
+        {
+            showFailed.checked = true;
+            showPassed.checked = true;
+            showWarning.checked = true;
+            showNotRun.checked = true;
+            showJustified.checked = true;
+            showIncomplete.checked = true;
+        }
+    }
+    
+    updateVisibleChecks();
+}
+
+function markEmptyFolders(){
+	var nodeTypes = ["FailedCheck","PassedCheck",  "WarningCheck", "NotRunCheck"];
+	var folderArray = document.querySelectorAll("div.FolderContent");
+	
+	for (var n=0;n<folderArray.length;n++){
+		/* get direct check result children and check visibility */
+		var childNodes = folderArray[n].childNodes;
+		var noneVisible = true;
+		var noChecksInFolder = true;
+		
+		for (var ni=0;ni<childNodes.length;ni++){
+			if (childNodes[ni].nodeType == 1 && childNodes[ni].tagName.toLowerCase() == "div"){
+				if (childNodes[ni].className == nodeTypes[0] || childNodes[ni].className == nodeTypes[1] || childNodes[ni].className == nodeTypes[2] || childNodes[ni].className == nodeTypes[3]){
+					noChecksInFolder = false;
+					if (childNodes[ni].style.display != "none"){
+						noneVisible = false;
+                        break;
+					}
+				}
+			}
+		}
+		
+		/* Only display hidden message if any checks inside the folders and not just other folders */
+		if (!noChecksInFolder){
+			var hiddenMessage = folderArray[n].querySelector("div.EmptyFolderMessage");
+			
+			if (hiddenMessage && noneVisible == true){
+				hiddenMessage.style.display = "";
+			}else if (hiddenMessage && noneVisible == false){
+				hiddenMessage.style.display = "none";
+			}else{
+				/* hidden message not found */
+			}
+		}
+	}
+
+    return;
+}
+
+function updateVisibleChecks( /* show all flags */ checkbox ){
+	
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox", "Justified Checkbox", "Incomplete Checkbox"];
+	var nodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check", "Justified Check", "Incomplete Check"];
+	var textInput = document.getElementById("TxtFilterInput");
+	
+	
+	if (checkbox && textInput && textInput.color=="gray"){
+		var checkType = checkbox.id;
+		var ind = checkboxes.indexOf(checkType);
+		var nodes = document.getElementsByName(nodeTypes[ind]);
+		for (i = 0; i < nodes.length;i++){
+		    nodes[i].style.display = checkbox.checked ? "" : "none";
+		}
+	}
+	else{ /* Update all checks if called from init or if a previous text filter was applied */
+		for (i = 0; i < checkboxes.length; i++){
+			
+			  var show = document.getElementById(checkboxes[i]).checked ? "" : "none";
+			  var nodes = document.getElementsByName(nodeTypes[i]);
+			  for(j = 0; j < nodes.length; j++){
+				  nodes[j].style.display = show;
+			  }
+		   
+		}
+	}
+
+    /* clear text search */
+	if (textInput && checkbox){
+		textInput.value = "Search by check name";
+        textInput.style.color = "gray";
+        textInput.blur;
+	}
+
+    markEmptyFolders();
+
+    return; 
+}
+
+function filterByText(ev){
+	// get all the nodes
+	var allNodeTypes = ["Failed Check","Passed Check",  "Warning Check", "Not Run Check"];
+	var checkboxes = ["Failed Checkbox", "Passed Checkbox", "Warning Checkbox", "Not Run Checkbox"];
+	var nodeTypes = [];
+	
+	// get nodes depending on filter selections
+	for (var n=0; n<checkboxes.length; n++){
+		var checkbox = document.getElementById(checkboxes[n]);
+		if (checkbox && checkbox.checked){
+			nodeTypes.push(allNodeTypes[n]);
+		}
+	}
+	
+    var searchNodes = [".CheckHeading"];
+    var allnodes = [];
+	var alltext = [];
+	if (!ev) return;
+	var target = ev.target ? ev.target : window.event.srcElement;
+	var searchString = target.value;
+	
+	if (!searchString){
+        updateVisibleChecks();  // clear all and display by other filters
+	}else{
+		for (i = 0; i < nodeTypes.length; i++){
+			var nodes = document.getElementsByName(nodeTypes[i]);
+			for (j = 0; j < nodes.length; j++){
+				// get text from check heading
+				var checkContent = nodes[j].querySelector(searchNodes).innerHTML;
+				// creaet a regular expression to ignore case
+				var ss = new RegExp(searchString.trim(), "i");
+				if (ss.exec(checkContent)){
+				   nodes[j].style.display = "";
+				}else{
+				   nodes[j].style.display = "none";
+				}
+			}
+		}
+        markEmptyFolders();
+	}	
+}
+
+
+function MATableShrink(o,tagNameStr){
+    var temp = document.getElementsByName(tagNameStr);
+    var classUsed = document.getElementsByName('EmbedImages'); 
+    var embeddedMode = !(classUsed.length == 0);
+    var img = o.querySelector("img");
+
+    if (temp[0].style.display == "") 
+    {
+        temp[0].style.display = "none";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }
+        else
+        {
+            img.src = "plus.png";
+        }
+    } 
+    else 
+    {
+        temp[0].style.display = "";
+        if (embeddedMode)
+        {
+            img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+        else
+        {
+            img.src = "minus.png";
+        }
+    }
+}
+
+// rtwreport needs it 
+function updateHyperlink() {
+    docObj = window.document;
+    loc = document.location;
+    var aHash = "";
+    var externalweb = "false";
+    if (loc.search || loc.hash) {
+        if (loc.search)
+            aHash = loc.search.substring(1);
+        else
+            aHash = loc.hash.substring(1);
+    }    
+    var args = new Array();
+    args = aHash.split('&');
+    for (var i = 0; i < args.length; ++i) {
+        var arg = args[i];
+          sep = arg.indexOf('=');
+        if (sep != -1) {
+            var cmd = arg.substring(0,sep);
+            var opt = arg.substring(sep+1);
+            switch (cmd.toLowerCase()) {
+            case "externalweb":
+                externalweb = opt;
+                break;
+            }
+        }
+    }        
+    if (externalweb === "true") {        
+        var objs = docObj.getElementsByTagName("a");
+        if (objs.length > 0 && objs[0].removeAttribute) {
+            for (var i = 0; i < objs.length; ++i) {           
+                if (objs[i].href.indexOf('matlab') > -1)           
+                    objs[i].removeAttribute("href");                
+            }
+        }
+    }
+    init();
+}
+    
+function findParentNode(e) {
+   var parent = e.parentElement;
+   if (!!parent) {
+    if (parent.id == "") {   
+       return findParentNode(parent);
+    } else {
+       return parent;
+    }
+   } else {
+    return null;
+   }
+}
+
+function expandParentNode(e) {
+   var parent = findParentNode(e);
+   while (!!parent) { 
+    var prefix = "FolderControl_";
+    var folderControl = document.getElementById(prefix.concat(parent.id));
+    if (parent.style.display == "none") {       
+       MATableShrink(folderControl,parent.id);
+    }
+    parent = findParentNode(parent);
+   }
+}
+
+function isHidden(e) {
+    return (e.offsetParent === null)
+}
+
+function navigateToElement(eleID) {
+   var e = document.getElementById(eleID);
+   if (isHidden(e)) {
+       expandParentNode(e);
+   }       
+   if (!!e && e.scrollIntoView) {
+       e.scrollIntoView();
+   }
+}
+
+function setTextContent(element, value) {
+    var content = element.textContent;
+    if (value === undefined) return;
+    
+    if (content !== undefined) element.textContent = value;
+    else element.innerText = value;
+}
+
+function hideControlPanel(control){
+	var panelComponents = ["ControlsCheckFiltering", "ControlsView", "ControlsTOC"];
+	var reportContent = document.querySelector(".ReportContent");
+	var controlPanel = document.getElementById("ControlPanel");
+	var isHidden = false;
+	
+    if (reportContent && control && controlPanel) {
+    	for (var n=0; n<panelComponents.length; n++){
+			var component = document.getElementById(panelComponents[n]);
+			
+			if (component && component.style.display == ""){
+				component.style.display = "none";
+            } else if (component && component.style.display == "none"){
+				component.style.display = "";
+			}
+		}
+		
+		if (controlPanel.style.width != "6px"){
+			reportContent.style.marginLeft = "25px";
+	    	controlPanel.style.width = "6px";
+	    	control.style.left = "0px";
+	       	var innerDiv = control.querySelector("#HidePanelControlInner");
+	       	setTextContent(innerDiv, "\u25BA");
+	    } else {
+	    	reportContent.style.marginLeft = "225px";
+        	controlPanel.style.width = "210px";
+        	control.style.left = "204px";
+        	var innerDiv = control.querySelector("#HidePanelControlInner");
+        	setTextContent(innerDiv, "\u25C0");
+        }
+    }
+}
+/* Copyright 2013 The MathWorks, Inc. */
+//COLLAPSIBLE FEATURE
+
+// global variables
+var GlobalCollapseState = "off";
+
+function collapseSDHelper(o, CollElementParent, disp, mode){
+    var CollElement = CollElementParent; /* ul/ol with lists, tbody with table */
+
+    if (CollElement.nodeName == "UL" || CollElement.nodeName == "OL"){
+        var CollName = "LI";
+    }else if (CollElement.nodeName == "TABLE"){
+        if (CollElement.querySelector('tbody')) {
+            /* tr modes are child nodes of tbody node */
+            CollElement = CollElement.querySelector('tbody');
+        }
+        var CollName = "TR";
+    }
+    
+    // get children (li for list and tr for table)
+    var children = CollElement.childNodes;
+
+    var nElements = 0;
+    for (var i=0;i<children.length;i++){
+        if (children[i].nodeName == CollName){
+            nElements = nElements + 1;
+            if (nElements > 5){
+                children[i].style.display = disp;
+            }
+        }
+    }
+    if (disp == "none"){
+        if (CollName == "LI"){
+            var text = " items)";
+        }else{
+            var text = " rows)";
+        }
+        
+        var textNode = document.createTextNode(("\u2228 More (" + (nElements-5) + text));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "on");
+
+        /* scroll to element if it is not visible */
+        if (mode == "single" && CollElement.offsetTop < document.documentElement.scrollTop){
+			CollElement.scrollIntoView();
+		}
+    }else{
+        var textNode = document.createTextNode(("\u2227 " + "Less"));
+        o.replaceChild(textNode,o.firstChild);
+
+        CollElementParent.setAttribute("dataCollapse", "off");
+    }
+}
+
+function collapseSD(o, ID){
+    var CollElement = document.getElementById(ID);
+    if (CollElement != null){
+        if (CollElement.getAttribute("dataCollapse") == "off"){
+            var disp="none";
+        }else{
+            var disp="";
+        }
+        collapseSDHelper(o, CollElement, disp, "single");
+    }
+}
+
+function collapseAllHelper(o, CollElement, CollInfo, disp){
+
+    if (CollElement != null){
+        var img = o.querySelector("img");
+        if (disp == "none"){
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAkUlEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAEfQCCwt+JQABRHEYAAQQCzE2w9h//vzDUAcQQDgNgCkGacamEQYAAohiLwAEEEED8NkOAgABxEJMVOEDAAHESGlmAgggisMAIIAoNgAgwAC+/BqtC+40NQAAAABJRU5ErkJggg==";
+        }else{
+            CollElement.style.display = disp;
+			img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII=";
+        }
+
+        if (CollInfo != null){
+            if (disp == "none"){
+                CollInfo.style.display = "";
+            }else{
+                CollInfo.style.display = "none";
+            }
+        }
+    }
+}
+
+function collapseAll(o, ID, ID2){
+    var CollElement = document.getElementById(ID);
+    var CollInfo = document.getElementById(ID2);
+
+    if (CollElement.style.display == ""){
+        var disp = "none";
+    }else{
+        var disp = "";
+    }
+
+    collapseAllHelper(o, CollElement, CollInfo, disp);
+}
+
+function expandCollapseAll(o){
+	/* IE has no method for getting elements by class name. Use querySelectorAll instead 
+       Note: requires IE not to be in IE7 compatability mode */
+    var SDCollapse = document.querySelectorAll(".SystemdefinedCollapse");
+    var Button = null;
+
+    if (GlobalCollapseState == "off"){
+        var disp = "none";
+        GlobalCollapseState = "on";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Show check details";
+		}
+    }else{
+        var disp = "";
+        GlobalCollapseState = "off";
+
+        if (o && o.firstChild.nodeType == 3) {
+            var textNode = o.firstChild;
+        	textNode.nodeValue = " Hide check details";
+		}
+    }
+
+    for (var i=0;i<SDCollapse.length;i++){
+        Button = SDCollapse[i].nextSibling;
+        while(Button.nodeType !== 1){
+            Button = Button.nextSibling;
+        }
+        //Button = SDCollapse[i].parentNode.querySelector("span.SDCollapseControl");
+        collapseSDHelper(Button, SDCollapse[i], disp, "all");
+    }
+		
+    var AllCollapse = document.querySelectorAll(".AllCollapse");
+
+    for (i=0;i<AllCollapse.length;i++){
+        // get children of top level collapsible div
+        var children = AllCollapse[i].parentNode.children;
+        
+        // collapsible button is first child
+		Button = children[0];
+        
+        // get content to display in collapsed state
+        // this is optional and last child of collapsible div 
+        if (Button)
+        {
+            if (children.length>2)
+            {
+                collapseAllHelper(Button, AllCollapse[i], children[2], disp);
+            }
+            else
+            {
+                collapseAllHelper(Button, AllCollapse[i], null, disp);
+            }
+        }
+    }
+}
+
+
+function expandCollapseAllOnLoad(){
+    GlobalCollapseState = "on";
+    var Switch = document.getElementById("ExpandCollapseAll");
+    expandCollapseAll(Switch);
+}
+//END COLLAPSIBLE
+
+ --></script></head>  
+<body onload="updateHyperlink(); expandCollapseAllOnLoad();">  
+<span id="top">
+
+</span>
+<!-- mdladv_ignore_start --><div id="Container"><!-- mdladv_ignore_finish -->
+
+<!-- mdladv_ignore_start --><div id="ControlPanel">
+<div id="HidePanelControl" title="Minimize/Maximize control panel" onclick="hideControlPanel(this)" onmouseover="this.style.cursor='pointer'">
+<div id="HidePanelControlInner">
+&#9664;
+</div>
+</div>
+<div id="ControlsCheckFiltering">
+<h2>
+Filter checks
+</h2>
+<table id="CPFilteringTable" border="1">
+<tr>
+<td align="left" valign="top">
+<input id="Passed Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg==" /> Passed
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Failed Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC" /> Failed
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Warning Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC" /> Warning
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Not Run Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII=" /> Not Run
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Justified Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII=" /> Justified
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Information Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII=" /> Information
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<input id="Incomplete Checkbox" checked="checked" onclick="updateVisibleChecks(this)" type="checkbox" />
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg==" /> Incomplete
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+
+</table>
+</div>
+<div id="TextFilter">
+<input id="TxtFilterInput" onkeyup="filterByText(event)" onfocus="if (this.value=='Search by check name'){ this.value=''; this.style.color='black';}" onblur="if (this.value==''){ this.value='Search by check name'; this.style.color='gray';}" value="Search by check name" type="text" title="Hide checks without keywords in their titles." />
+
+</div>
+<div id="ControlsTOC">
+<h2>
+Navigation
+</h2>
+<div id="TOCScrollableArea">
+<div class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('FolderControl_com.mathworks.HDL.FPGAImplementation')">
+ 4. FPGA Synthesis and Analysis</div>
+<div class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('FolderControl_com.mathworks.HDL.RunSynthesisTasks')">
+1 4.2. Perform Synthesis and P/R</div>
+</div>
+</div>
+<div id="ControlsView">
+<h2>
+View
+</h2>
+<div class="ControlPanelTextControl" title="Scroll to the top of the report" onmouseover="this.style.cursor='pointer'" onclick="navigateToElement('top')">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARAQMAAADqlG66AAAAA3NCSVQICAjb4U/gAAAABlBMVEX///9Tktdg+Ox4AAAAAnRSTlMA/1uRIrUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAWdEVYdENyZWF0aW9uIFRpbWUAMTIvMTgvMDiz53+6AAAAGHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3NPsx9OAAAEEXRFWHRYTUw6Y29tLmFkb2JlLnhtcAA8P3hwYWNrZXQgYmVnaW49IiAgICIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA0LjEtYzAzNCA0Ni4yNzI5NzYsIFNhdCBKYW4gMjcgMjAwNyAyMjozNzozNyAgICAgICAgIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eGFwPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIj4KICAgICAgICAgPHhhcDpDcmVhdG9yVG9vbD5BZG9iZSBGaXJld29ya3MgQ1MzPC94YXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4YXA6Q3JlYXRlRGF0ZT4yMDA4LTEyLTE4VDIyOjA2OjAxWjwveGFwOkNyZWF0ZURhdGU+CiAgICAgICAgIDx4YXA6TW9kaWZ5RGF0ZT4yMDA4LTEyLTE4VDIyOjA4OjQzWjwveGFwOk1vZGlmeURhdGU+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA9F2ciAAAAIElEQVQImWNgQAP8f5A4BxgYGB8wMDB/YGBg/4EmhwAAvEcFqqXqgcsAAAAASUVORK5CYII="  id="CPToTopImg"/>Scroll to top</div>
+<div id="ExpandCollapseAll" class="ControlPanelTextControl" onmouseover="this.style.cursor='pointer'" onclick="expandCollapseAll(this)" title="Expand/Collapse all collapsible check content.">
+Show check details</div>
+</div>
+</div>
+<!-- mdladv_ignore_finish -->
+<!-- mdladv_ignore_start --><div class="ReportContent" id="wavelet_transform_float/HDL_DUT"><!-- mdladv_ignore_finish --><table class="AdvTableNoBorder" width="100%" border="0">
+<tr>
+<td colspan="2" align="center">
+<b>
+Model Advisor Report - <font color="#800000">wavelet_transform_float.slx</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+Simulink version: <font color="#800000">24.2</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Model version: <font color="#800000">1.54</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<b>
+System: <font color="#800000">wavelet_transform_float/HDL_DUT</font>
+</b>
+
+</td>
+<td align="right" valign="top">
+<b>
+Current run: <font color="#800000">04-Jun-2026 13:48:53</font>
+</b>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<img src="info_icon.png" /> 1 item with a timestamp different than 04-Jun-2026 13:48:53
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+
+</table>
+<br /><font color="#800000"><b>Run Summary</b></font><br /><table class="AdvTableNoBorder" width="60%" border="0">
+<tr>
+<th align="left" valign="top">
+<b>
+Incomplete
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Failed
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Warning
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Justified
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Passed
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Information
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Not Run
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Total
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg=="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC"  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  /> 2
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII="  /> 0
+</td>
+<td align="left" valign="top">
+&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  /> 2
+</td>
+<td align="left" valign="top">
+ 4
+</td>
+
+</tr>
+
+</table>
+
+<!-- mdladv_ignore_start --><br /><br /><font color="#800000"><b><!-- mdladv_ignore_start --><span class="FolderControl" id="FolderControl_com.mathworks.HDL.FPGAImplementation" onclick="MATableShrink(this,'com.mathworks.HDL.FPGAImplementation')" onmouseover="this.style.cursor = 'pointer'">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII="  /></span>
+<!-- mdladv_ignore_finish --> 4. FPGA Synthesis and Analysis</b></font><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "com.mathworks.HDL.FPGAImplementation"  id = "com.mathworks.HDL.FPGAImplementation" class="FolderContent"><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div class="EmptyFolderMessage" style="display:none;">
+All checks hidden.
+</div>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 10pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_30"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.CreateProject">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.CreateProject">
+4.1. Create Project</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_start --> (04-Jun-2026 13:44:41)<!-- mdladv_ignore_finish --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p /><font color="#C04C0B">
+Warning 
+</font>
+Downstream Integration:
+Current version 2025.2 of Xilinx Vivado tool on system path 
+may not be compatible with HDL Workflow Advisor. 
+The compatible version: 
+ Xilinx Vivado 2023.1. 
+Attempt to continue running Xilinx Vivado ... 
+<p /><font color="#009E0F">
+Passed
+</font>
+Create Project.<p />Task "Create Project" successful.<p />Generated logfile: <a href="matlab:edit('hdl_prj_wavelet_transform_float\hdlsrc\wavelet_transform_float\workflow_task_CreateProject.log')">hdl_prj_wavelet_transform_float\hdlsrc\wavelet_transform_float\workflow_task_CreateProject.log</a><p />****** Vivado v2025.2 (64-bit)<p />  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025<p />  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025<p />  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025<p />  **** Start of session at: Thu Jun  4 13:44:45 2026<p />    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.<p />    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.<p />source HDL_DUT_Xilinx_Vivado_run.tcl -notrace<p />### Create new Xilinx Vivado 2025.2 project <a href="matlab:downstream.handle('Model','wavelet_transform_float').openTargetTool;">hdl_prj_wavelet_transform_float\vivado_prj\HDL_DUT_vivado.xpr</a><p />INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.<p />Current project path is 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/vivado_prj'<p />create_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 554.133 ; gain = 219.879<p />### Set Xilinx Vivado 2025.2 project properties<p />### Update Xilinx Vivado 2025.2 project with HDL source files<p />WARNING: [Vivado 12-818] No files matched '*.tcl'<p />### Close Xilinx Vivado 2025.2 project.<p />INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 13:45:32 2026...<p />Elapsed time is 50.69 seconds.<p /><!-- mdladv_ignore_start --><!-- inputparam_section_start --><H5><b>
+Input Parameters Selection
+</b>
+</H5><table class="AdvTable" border="1">
+<tr>
+<th align="left" valign="top">
+<b>
+Name
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Project folder:
+</td>
+<td align="left" valign="top">
+hdl_prj_wavelet_transform_float\vivado_prj
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Synthesis objective:
+</td>
+<td align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Additional source files:
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Add Source...
+</td>
+<td align="left" valign="top">
+N/A
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Additional project creation Tcl files:
+</td>
+<td align="left" valign="top">
+&#160;
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Add Tcl...
+</td>
+<td align="left" valign="top">
+N/A
+</td>
+
+</tr>
+
+</table>
+<!-- inputparam_section_finish --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><br /><br /><font color="#800000"><b><!-- mdladv_ignore_start -->&#160; &#160; <span class="FolderControl" id="FolderControl_com.mathworks.HDL.RunSynthesisTasks" onclick="MATableShrink(this,'com.mathworks.HDL.RunSynthesisTasks')" onmouseover="this.style.cursor = 'pointer'">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAAhklEQVR42mL8//8/AyUAIICYGCgEAAFEsQEAAUSxAQABxIIu0NTURDBQ6urqGGFsgABiwaagpqYOp+aWliYUPkAAUewFgACi2ACAAGLBKcGCafafP/8wxAACCKcB2BRjAwABRLEXAAKIYgMAAoiFmKjCBwACiJHSzAQQQBR7ASCAKDYAIMAAUtQUow+YsTsAAAAASUVORK5CYII="  /></span>
+<!-- mdladv_ignore_finish -->1 4.2. Perform Synthesis and P/R</b></font><span class = "SubResultsSummary" id= "SubResults_com.mathworks.HDL.RunSynthesisTasks" >&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEQSURBVHgBrVI7csIwEH3rMK7dZdI5J0jKZNLQJJM+aRPICRJuEG7gI+Ch5QD8ChoGOnwEOobONRgvWo0QDB9jD7xGK+3u05P2AReC9g+4XPbgLn5VWAXDN2WRykS4SevUHk9PEvDbSwUpB+rUw3HEcLhOnVFwQMCvz+pWCpBLN1WpOwwtAb8/+UicScbNh0qW7j0NBrGjtwn9F2gWeCgt/iRwjKYHFAWhIkvJbB712mwBt3fZjfMZ8PUpkb+jwIAJZ7FXYxTwVCV8fH+gAKKtgpRCFMcOQeIGynVx7lapVa60BDJPUFrLTQC2lrafSL1xA8y1TCWSW+GH+kesbGu0K5WxxBub8UJ/cihP1WqviTVjXFeRN9ClYgAAAABJRU5ErkJggg=="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEDSURBVHgBrVIxCsJAENwVGzux1MZCxDKg+AYVLHxBYmXjI/IECxsr4wsshPgHEUkZxCJNLCWdnWf2SI41uYBBpzhud2fm9vYO4EcgD9x+18QXruJtvYAfCCHsiXfd5QwSsQNfIDaxUpMKF7emMxhdfOgsljkR5ahGHER0XKNrKoNYbGfJ3CQbSw3Kq0I1idu0hIc91JotrQHhtllLToI6N1Agku5Uyqc1jgpoQMTH+aRi2uvEhQZ0cmMwVDHtdYPVGvDWedu6QRI+ZkBPpBNzg+c95INUHUTcKCsuGGBAi/yJR6NnAYotlIHA+djzHfWVS5kkYmBXAJmIC2lrBYi4+C94A/a+eag5PUw2AAAAAElFTkSuQmCC"  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD3SURBVHgBzZI7EsFQFIb/I4oQRTSUsgOlNlqPGTtgB+yAHRg9Ywka/c0WFGp0aCgYxuvIZcwk8phkRuGr7uPc///P3AP8NVY9vbBqmgirSQRdiIrWApNhL01RTXUQB9FQDel+Wi/5tFmynWInTF2PnIDuSlu6q/kC1FxBHunIXDqRBKQ7GJ5iArX9UngTXJUe/NFJu/ZDBaQ7EZoIgtAStYwZKEA3ZeLcnzcrnLerLw3uuvcfd/vbKIExIsCgcnl6sFwJSHErS0rDOUqjuUeAiMeuFhxDEw2G8RmuVwtyaGIJvNmb02M2+RJ80MDuvxjnNT8wwy94AjZHSy+aGaDFAAAAAElFTkSuQmCC"  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADqSURBVHgBpZKvC8JAFMffZAPFslXTLBYNitVimBYx+A/of+CibYs2rcZVg4gYBYtFUJdWLFsxb0UUDOod3Insx43dBw7e4/i++753T3h/AQ5ywIlIAuvsgb65QPB8JQpUpQimVoNhU8W5QFooT7fg+XdIg1yQwDcHOKYtsMToRb1VwXHw+LlMNQMkRrbXzi10F1kAvWSPOyDnJSpuL/aRLsWoAvPDFeolBWy9i/M4cawDxGh5BOvkJopjHRDMnQMs/hy4kx4+afNQgSzQRVKMFXMLCWgbiRPqYNZv4AsW6GsNrRp2kBXuGXwAIu1X3q8Yjd0AAAAASUVORK5CYII="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />1&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAACVElEQVQ4jV1TTWtTQRQ99868NKWUihRauypBkLppNy20CFl2adE/8HYuxIXEnX+hi/oLDOhWydLiyoVZtC6ahVCskUohGMWPSGyT997MlTvvJTZeGJiPe849cz9IRHDZKrvNmJhjEFchHhABGQtxWQvAXru2Wb/sPyao7DbXiKhObFaJDfT+7s2rADFevP8GCCA+U1clitu1zaMxQWW3uUzERyCaYxtBCTaWZvD8zvVAfn//DK9PfqgK+CwFID0RWfv0aOuUAwtRg4wZg1XyQeccjQ89HH8f4rCbgqMpkC3BTJUVMQegoVjzbHY7Jjb3wAZsbADrWpkvw7NFu5fBiaCbGJhoKihSJRC/+KR59tmKSExEITKIQtIAwuNbS1i/Nh0Ah1+GiPe/hne2paDGi1ei2BJRNXzDGDBbgBlsbU42TjWBiMMbYGFK5VzJoF8tcsAgMrkvc1ATv+riXXeYK+gmIBuFL6oC3QfVetYyidZb66QRiIuoHL5SJHmiV8JZgwaCAKZCMo0gkyAqzoXP6J1YCbQxqICOyQolNBE2B45UEsEN+i0l2FP1Pksg3uUgcUU1CtO9D62Y+4iDSy5UwR5rb4tLW9phWl+XDEI6nm7P48aVKBDcrpTD8mmCtP8LLhlq4lsfH67XbSiHyA7EH/ksmWNmuHSI9YW8adSWZgwWS1mYj+z8N8T7HiA7/w/TMhvbIBOtclTCg40FrMxPYzYidP44vDz+ibcnHYiXFhF22rXN0wmCkek4s41i79IqmxLEpTDlGWQX/TdEqLdrW//GGcBfdA38qIpY8foAAAAASUVORK5CYII="  />0&#160;&#160;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  />1</span>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "com.mathworks.HDL.RunSynthesisTasks"  id = "com.mathworks.HDL.RunSynthesisTasks" class="FolderContent"><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div class="EmptyFolderMessage" style="display:none;">
+All checks hidden.
+</div>
+<!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Passed Check"  id = "Passed Check" class="PassedCheck" style="margin-left: 20pt;"><!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_34"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunVivadoSynthesis">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHTSURBVHgBrVO9ThtBEP7mLomDFEWXpEhFbD9BlC5SUGynSkdSpoiOMt2lovXdG0CqpEpIR2cXtPxJSNAgIyoaOKBBAuEzDRYSHmb29hYbRAWjk3a1O9/PzM4B9wy6dRIHAeBFBJpioJInUIfBHeAyQZyldxL4yatwwJgRYGAvGETEPGBLlDFxgubprMM4dPIyAtNv2T0dYid2e9L9mOw+o1FKsdzf0nPP2q4IOFZFHnLEziJRJXiDuDaNF6XnUo0/k5daEMBXcMCaidFQEgUvhi0069P4WJ3QlAADL3IEYu/tKIa5IFLwUtg2a+doG6vpWu7KRzjkgA3BXrSJ3WhT7JY1h6sG3BLwOLYE/GluEt1+TxSkUqaqI2BbatY/s4ot1MofaNEqK7gxN8lduS8aWti1JSDV9ev8d6TZQU4y1XbKjf9fRPmMhvsCMxfOAf0TVuxnh6pkSDSsMrLzHuNWUMeKw06fv2e6axo3jnp5Au2dBVPWtarzkAGDdzqV16+WBCGx/7d4SjYvQeZjvmGAvJ9oHs/mj1GETlZtrCeA9zDTODoSlJuQe/xA8+RPce6PMK+cr6NempfWBJr/7LH/+skjjy4uORWKX/IzfUPc3cBDxhXE6LNA6WFItQAAAABJRU5ErkJggg=="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunVivadoSynthesis">
+4.2.1. Run Synthesis</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p /><font color="#009E0F">
+Passed
+</font>
+Synthesis<p />Parsed resource report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\wavelet_transform\hdl_prj_wavelet_transform_float\vivado_prj\HDL_DUT_vivado.runs\synth_1\HDL_DUT_utilization_synth.rpt')">HDL_DUT_utilization_synth.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="4" align="left">
+<b>
+Resource summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+<b>
+Resource
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Usage
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Available
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Utilization (%)
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slice LUTs
+</td>
+<td align="left" valign="top">
+13131
+</td>
+<td align="left" valign="top">
+53200
+</td>
+<td align="left" valign="top">
+24.68
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slice Registers
+</td>
+<td align="left" valign="top">
+14845
+</td>
+<td align="left" valign="top">
+106400
+</td>
+<td align="left" valign="top">
+13.95
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+DSPs
+</td>
+<td align="left" valign="top">
+2
+</td>
+<td align="left" valign="top">
+220
+</td>
+<td align="left" valign="top">
+0.91
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Block RAM Tile
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+140
+</td>
+<td align="left" valign="top">
+0.00
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+URAM
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+0
+</td>
+<td align="left" valign="top">
+ 
+</td>
+
+</tr>
+
+</table>
+<p />Parsed timing report file: <a href="matlab:edit('C:\Users\valen\Documents\FIB_barcelone\Cours\PD\wavelet_transform\hdl_prj_wavelet_transform_float\vivado_prj\timing_post_map.rpt')">timing_post_map.rpt</a>.<p /><table class="AdvTable" border="1">
+<tr>
+<td colspan="2" align="left">
+<b>
+Timing summary
+</b>
+
+</td>
+
+</tr>
+<tr>
+<th align="left" valign="top">
+&#160;
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Requirement
+</td>
+<td align="left" valign="top">
+10 ns (100 MHz)
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Data Path Delay
+</td>
+<td align="left" valign="top">
+20.538 ns
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Slack
+</td>
+<td align="left" valign="top">
+-10.666 ns
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Clock Frequency
+</td>
+<td align="left" valign="top">
+48.39 MHz
+</td>
+
+</tr>
+
+</table>
+<p />WARNING: Timing constraints not met.<p /><pre>Generated Post Map Timing Report <a href="matlab:edit('hdl_prj_wavelet_transform_float\vivado_prj\timing_post_map.rpt')">hdl_prj_wavelet_transform_float\vivado_prj\timing_post_map.rpt</a>.
+Task "Run Synthesis" successful.
+Generated logfile: <a href="matlab:edit('hdl_prj_wavelet_transform_float\hdlsrc\wavelet_transform_float\workflow_task_RunSynthesis.log')">hdl_prj_wavelet_transform_float\hdlsrc\wavelet_transform_float\workflow_task_RunSynthesis.log</a>
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 13:48:56 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT_Xilinx_Vivado_run.tcl -notrace
+### Open existing Xilinx Vivado 2025.2 project hdl_prj_wavelet_transform_float\vivado_prj\HDL_DUT_vivado.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/vivado_prj'
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/vivado_prj/HDL_DUT_vivado.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Users/valen/AMD_vivado/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 556.414 ; gain = 222.113
+### Running Synthesis in Xilinx Vivado 2025.2 ...
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Thu Jun  4 13:49:43 2026] Launched synth_1...
+Run output will be captured here: C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/vivado_prj/HDL_DUT_vivado.runs/synth_1/runme.log
+[Thu Jun  4 13:49:43 2026] Waiting for synth_1 to finish...
+*** Running vivado
+    with args -log HDL_DUT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDL_DUT.tcl
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 13:49:48 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+source HDL_DUT.tcl -notrace
+create_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 554.477 ; gain = 219.645
+Command: synth_design -top HDL_DUT -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20388
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1328.988 ; gain = 539.219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'HDL_DUT' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/HDL_DUT.v:42]
+INFO: [Synth 8-6157] synthesizing module 'wavelet_transform' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/wavelet_transform.v:22]
+INFO: [Synth 8-6157] synthesizing module 'nfp_convert_double2single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/nfp_convert_double2single.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_convert_double2single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/nfp_convert_double2single.v:24]
+INFO: [Synth 8-6157] synthesizing module 'nfp_mul_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/nfp_mul_single.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_mul_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/nfp_mul_single.v:26]
+INFO: [Synth 8-6157] synthesizing module 'nfp_add_single' [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/nfp_add_single.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'nfp_add_single' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/nfp_add_single.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'wavelet_transform' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/wavelet_transform.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'HDL_DUT' (0#1) [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/HDL_DUT.v:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1513.215 ; gain = 723.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1513.215 ; gain = 723.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1513.215 ; gain = 723.445
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1513.215 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/clock_constraint.xdc]
+Finished Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/clock_constraint.xdc]
+Completed Processing XDC Constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1587.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1587.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:18 ; elapsed = 00:01:23 . Memory (MB): peak = 1587.910 ; gain = 798.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:18 ; elapsed = 00:01:23 . Memory (MB): peak = 1587.910 ; gain = 798.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:23 . Memory (MB): peak = 1587.910 ; gain = 798.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 1587.910 ; gain = 798.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   44 Bit       Adders := 2     
+	   2 Input   43 Bit       Adders := 2     
+	   2 Input   33 Bit       Adders := 17    
+	   2 Input   28 Bit       Adders := 14    
+	   2 Input   27 Bit       Adders := 16    
+	   2 Input   25 Bit       Adders := 4     
+	   2 Input   24 Bit       Adders := 16    
+	   2 Input   12 Bit       Adders := 4     
+	   3 Input   12 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 36    
+	   3 Input    8 Bit       Adders := 30    
+	   2 Input    6 Bit       Adders := 8     
+	   2 Input    5 Bit       Adders := 14    
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
++---Registers : 
+	              102 Bit    Registers := 1     
+	               88 Bit    Registers := 2     
+	               80 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	               53 Bit    Registers := 8     
+	               52 Bit    Registers := 2     
+	               49 Bit    Registers := 2     
+	               45 Bit    Registers := 2     
+	               42 Bit    Registers := 4     
+	               32 Bit    Registers := 757   
+	               29 Bit    Registers := 2     
+	               28 Bit    Registers := 84    
+	               27 Bit    Registers := 56    
+	               26 Bit    Registers := 14    
+	               25 Bit    Registers := 2     
+	               24 Bit    Registers := 20    
+	               23 Bit    Registers := 196   
+	               18 Bit    Registers := 2     
+	               14 Bit    Registers := 5     
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 10    
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 380   
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 10    
+	                5 Bit    Registers := 44    
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 62    
+	                1 Bit    Registers := 167   
++---Muxes : 
+	   2 Input   53 Bit        Muxes := 4     
+	   2 Input   47 Bit        Muxes := 2     
+	   2 Input   41 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 73    
+	   2 Input   31 Bit        Muxes := 1     
+	   4 Input   31 Bit        Muxes := 1     
+	   2 Input   30 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 14    
+	   2 Input   27 Bit        Muxes := 14    
+	   4 Input   26 Bit        Muxes := 6     
+	   2 Input   24 Bit        Muxes := 6     
+	   2 Input   23 Bit        Muxes := 62    
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 160   
+	   2 Input    6 Bit        Muxes := 8     
+	   3 Input    6 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 62    
+	   3 Input    5 Bit        Muxes := 2     
+	   4 Input    5 Bit        Muxes := 16    
+	   6 Input    5 Bit        Muxes := 42    
+	   2 Input    4 Bit        Muxes := 4     
+	   3 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 488   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP Product_out1, operation Mode is: C+A*B.
+DSP Report: operator Product_out1 is absorbed into DSP Product_out1.
+DSP Report: operator Product_out1 is absorbed into DSP Product_out1.
+DSP Report: Generating DSP Product_out1, operation Mode is: C+A*B.
+DSP Report: operator Product_out1 is absorbed into DSP Product_out1.
+DSP Report: operator Product_out1 is absorbed into DSP Product_out1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:24 ; elapsed = 00:05:44 . Memory (MB): peak = 1938.039 ; gain = 1148.270
+---------------------------------------------------------------------------------
+ Sort Area is wavelet_transform__GB0 Product_out1_0 : 0 0 : 3006 3006 : Used 1 time 0
+ Sort Area is wavelet_transform__GB3 Product_out1_2 : 0 0 : 3006 3006 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|nfp_mul_single | C+A*B       | 24     | 17     | 41     | -      | 42     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|nfp_mul_single | C+A*B       | 24     | 17     | 41     | -      | 42     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:52 ; elapsed = 00:06:13 . Memory (MB): peak = 1938.039 ; gain = 1148.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:09:10 ; elapsed = 00:09:39 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:09:48 ; elapsed = 00:10:19 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:10:04 ; elapsed = 00:10:37 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:10:05 ; elapsed = 00:10:37 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:11 ; elapsed = 00:10:45 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:10:12 ; elapsed = 00:10:45 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:10:13 ; elapsed = 00:10:46 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:10:13 ; elapsed = 00:10:47 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+Static Shift Register Report:
++------------+-----------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|HDL_DUT     | u_wavelet_transform/u_wavelet_transform_float_HDL_DUT_wavelet_transform_nfp_convert_double2single/Delay23_PS_5_reg_reg[3]   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp/Delay8_reg_1_reg[3]                                                                      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp/Delay4_reg_reg[3][9]                                                                     | 4      | 10    | YES          | NO                 | YES               | 10     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp/Delay3_out1_4_reg[2]                                                                     | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp/Delay13_reg_reg[5]                                                                       | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp/Delay_reg_reg[6]                                                                         | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp/Delay7_out1_reg                                                                          | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp/Delay18_reg_reg[7]                                                                       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp/Delay2_reg_reg[3][0]                                                                     | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp/Delay17_reg_reg[6][22]                                                                   | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp/Delay17_reg_reg[6][21]                                                                   | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp/Delay15_reg_reg[7][0]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp/Delay13_reg_reg[7]                                                                       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp/Delay14_reg_reg[7]                                                                       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay5_out1_reg[22]                                                                    | 12     | 23    | YES          | NO                 | YES               | 23     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay4_out1_reg[7]                                                                     | 12     | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay3_out1_1_reg                                                                      | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_1/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay5_out1_reg[22]                                                                    | 23     | 23    | YES          | NO                 | YES               | 0      | 23      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay4_out1_reg[7]                                                                     | 23     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay3_out1_1_reg                                                                      | 24     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_2/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay5_out1_reg[22]                                                                    | 34     | 23    | YES          | NO                 | YES               | 0      | 23      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay4_out1_reg[7]                                                                     | 34     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay3_out1_1_reg                                                                      | 35     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_3/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay5_out1_reg[22]                                                                    | 45     | 23    | YES          | NO                 | YES               | 0      | 46      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay4_out1_reg[7]                                                                     | 45     | 8     | YES          | NO                 | YES               | 0      | 16      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay3_out1_1_reg                                                                      | 46     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_4/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay5_out1_reg[22]                                                                    | 56     | 23    | YES          | NO                 | YES               | 0      | 46      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay4_out1_reg[7]                                                                     | 56     | 8     | YES          | NO                 | YES               | 0      | 16      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay3_out1_1_reg                                                                      | 57     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_5/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch19_reg_reg[13][31]                                                                            | 14     | 32    | YES          | NO                 | YES               | 32     | 0       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch28_reg_reg[21][31]                                                                            | 22     | 32    | YES          | NO                 | YES               | 0      | 32      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_6/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_6/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_6/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_6/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_6/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_6/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_6/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay5_out1_reg[22]                                                                    | 12     | 23    | YES          | NO                 | YES               | 23     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay4_out1_reg[7]                                                                     | 12     | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay3_out1_1_reg                                                                      | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_7/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay5_out1_reg[22]                                                                    | 23     | 23    | YES          | NO                 | YES               | 0      | 23      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay4_out1_reg[7]                                                                     | 23     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay3_out1_1_reg                                                                      | 24     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_8/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay5_out1_reg[22]                                                                    | 34     | 23    | YES          | NO                 | YES               | 0      | 23      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay4_out1_reg[7]                                                                     | 34     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay18_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay3_out1_1_reg                                                                      | 35     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay2_reg_reg[3][0]                                                                   | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay17_reg_reg[6][22]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay17_reg_reg[6][21]                                                                 | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay15_reg_reg[7][0]                                                                  | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay13_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_9/Delay14_reg_reg[7]                                                                     | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay5_out1_reg[22]                                                                   | 45     | 23    | YES          | NO                 | YES               | 0      | 46      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay4_out1_reg[7]                                                                    | 45     | 8     | YES          | NO                 | YES               | 0      | 16      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay18_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay3_out1_1_reg                                                                     | 46     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay2_reg_reg[3][0]                                                                  | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay17_reg_reg[6][22]                                                                | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay17_reg_reg[6][21]                                                                | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay15_reg_reg[7][0]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay13_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_10/Delay14_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay5_out1_reg[22]                                                                   | 56     | 23    | YES          | NO                 | YES               | 0      | 46      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay4_out1_reg[7]                                                                    | 56     | 8     | YES          | NO                 | YES               | 0      | 16      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay18_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay3_out1_1_reg                                                                     | 57     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay2_reg_reg[3][0]                                                                  | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay17_reg_reg[6][22]                                                                | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay17_reg_reg[6][21]                                                                | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay15_reg_reg[7][0]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay13_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_11/Delay14_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay5_out1_reg[22]                                                                   | 67     | 23    | YES          | NO                 | YES               | 0      | 69      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay4_out1_reg[7]                                                                    | 67     | 8     | YES          | NO                 | YES               | 0      | 24      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay18_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay3_out1_1_reg                                                                     | 68     | 1     | YES          | NO                 | YES               | 0      | 3       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay2_reg_reg[3][0]                                                                  | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay17_reg_reg[6][22]                                                                | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay17_reg_reg[6][21]                                                                | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay15_reg_reg[7][0]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay13_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_12/Delay14_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay5_out1_reg[22]                                                                   | 78     | 23    | YES          | NO                 | YES               | 0      | 69      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay4_out1_reg[7]                                                                    | 78     | 8     | YES          | NO                 | YES               | 0      | 24      | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay18_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay3_out1_1_reg                                                                     | 79     | 1     | YES          | NO                 | YES               | 0      | 3       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay2_reg_reg[3][0]                                                                  | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay17_reg_reg[6][22]                                                                | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay17_reg_reg[6][21]                                                                | 5      | 22    | YES          | NO                 | YES               | 22     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay15_reg_reg[7][0]                                                                 | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay13_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_add_comp_13/Delay14_reg_reg[7]                                                                    | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/reduced_reg_5_reg[87]                                                                                   | 88     | 1     | YES          | NO                 | YES               | 0      | 3       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch25_reg_reg[79]                                                                                | 80     | 1     | YES          | NO                 | YES               | 0      | 3       | 
+|HDL_DUT     | u_wavelet_transform/reduced_reg_2_reg[87]                                                                                   | 88     | 1     | YES          | NO                 | YES               | 0      | 3       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp_1/Delay8_reg_1_reg[3]                                                                    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp_1/Delay4_reg_reg[3][9]                                                                   | 4      | 10    | YES          | NO                 | YES               | 10     | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp_1/Delay3_out1_4_reg[2]                                                                   | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp_1/Delay13_reg_reg[5]                                                                     | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp_1/Delay_reg_reg[6]                                                                       | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_nfp_mul_comp_1/Delay7_out1_reg                                                                        | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/u_wavelet_transform_float_HDL_DUT_wavelet_transform_nfp_convert_double2single_1/Delay23_PS_5_reg_reg[3] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch4_reg_reg[13]                                                                                 | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch14_reg_reg[5][30]                                                                             | 6      | 31    | YES          | NO                 | YES               | 31     | 0       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch13_reg_reg[101]                                                                               | 102    | 1     | YES          | NO                 | YES               | 0      | 4       | 
+|HDL_DUT     | u_wavelet_transform/reduced_reg_4_reg[65]                                                                                   | 66     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|HDL_DUT     | u_wavelet_transform/reduced_reg_1_reg[13]                                                                                   | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/reduced_reg_3_reg[13]                                                                                   | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/reduced_reg_reg[13]                                                                                     | 14     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch5_reg_reg[13][31]                                                                             | 14     | 32    | YES          | NO                 | YES               | 32     | 0       | 
+|HDL_DUT     | u_wavelet_transform/delayMatch_reg_reg[5][30]                                                                               | 6      | 31    | YES          | NO                 | YES               | 31     | 0       | 
+|HDL_DUT     | delayMatch_reg_reg[101][30]                                                                                                 | 102    | 2     | YES          | NO                 | YES               | 0      | 8       | 
++------------+-----------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|nfp_mul_single | Dynamic     | -      | -      | -      | -      | 42     | -    | -    | -    | -    | -     | 0    | 1    | 
+|nfp_mul_single | Dynamic     | -      | -      | -      | -      | 42     | -    | -    | -    | -    | -     | 0    | 1    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   696|
+|2     |DSP48E1 |     2|
+|3     |LUT1    |   103|
+|4     |LUT2    |  3461|
+|5     |LUT3    |  2668|
+|6     |LUT4    |  1541|
+|7     |LUT5    |  2210|
+|8     |LUT6    |  4472|
+|9     |MUXF7   |   774|
+|10    |MUXF8   |   384|
+|11    |SRL16E  |   718|
+|12    |SRLC32E |   633|
+|13    |FDCE    | 13768|
+|14    |FDRE    |  1077|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:10:13 ; elapsed = 00:10:47 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:15 ; elapsed = 00:10:17 . Memory (MB): peak = 2412.773 ; gain = 1548.309
+Synthesis Optimization Complete : Time (s): cpu = 00:10:14 ; elapsed = 00:10:48 . Memory (MB): peak = 2412.773 ; gain = 1623.004
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2412.773 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1856 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2412.773 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+Synth Design complete | Checksum: 1cbf56a6
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:10:44 ; elapsed = 00:11:26 . Memory (MB): peak = 2412.773 ; gain = 1858.297
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 2412.773 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/vivado_prj/HDL_DUT_vivado.runs/synth_1/HDL_DUT.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file HDL_DUT_utilization_synth.rpt -pb HDL_DUT_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 14:01:59 2026...
+[Thu Jun  4 14:02:06 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:12:22 . Memory (MB): peak = 563.383 ; gain = 0.000
+### Synthesis Complete.
+### Running PostMapTiming in Xilinx Vivado 2025.2 ...
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.518 . Memory (MB): peak = 822.883 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1856 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/clock_constraint.xdc]
+Finished Parsing XDC File [C:/Users/valen/Documents/FIB_barcelone/Cours/PD/wavelet_transform/hdl_prj_wavelet_transform_float/hdlsrc/wavelet_transform_float/clock_constraint.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 990.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 990.355 ; gain = 426.973
+WARNING: [Common 17-708] report_timing_summary: The '-name' option will be ignored because it is only relevant in GUI mode.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1568.512 ; gain = 578.156
+### PostMapTiming Complete.
+### Close Xilinx Vivado 2025.2 project.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 14:03:38 2026...
+Elapsed time is 887.3707 seconds.
+</pre><!-- mdladv_ignore_start --><!-- inputparam_section_start --><H5><b>
+Input Parameters Selection
+</b>
+</H5><table class="AdvTable" border="1">
+<tr>
+<th align="left" valign="top">
+<b>
+Name
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Value
+</b>
+
+</th>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+Skip pre-route timing analysis
+</td>
+<td align="left" valign="top">
+false
+</td>
+
+</tr>
+
+</table>
+<!-- inputparam_section_finish --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Not Run Check" id = "Not Run Check" class="NotRunCheck" style="margin-left: 20pt;"> <!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_35"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.RunImplementation">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADhSURBVHgBtZI/CoMwFIdfQg/QyU3o4ubopjdw8gS9heANdOsVegGv0A66F3RzqOCkU92ypUYSCM0flOIHIY/k5cdHEoA/QaLI8/y9TBdLb48xTtI0fZkCqOd5wMYv8zxDXdes/FBKkyzLnmIPy43TNMEwDNrBOSOEHkVRXMXCSQ5wHAd83wcdYRiuc9M00LbtbSnvSgAz4KpGxnFcTYwGQRBYA7gBaAN2GOgDXNeFKIqsAVVVmQ3YhnTjWgghZgP2AocbsE9lNYjjWHuwLEvouk5ZVwxkvS3IX7mH7ezptfMFbNhwT85bFwwAAAAASUVORK5CYII="  />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.RunImplementation">
+4.2.2. Run Implementation</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p />Not Run<!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><div name = "Not Run Check" id = "Not Run Check" class="NotRunCheck" style="margin-left: 10pt;"> <!-- mdladv_ignore_finish -->
+<p><hr /></p>  <a name="CheckRecord_36"></a><div class="CheckHeader" id="Header_com.mathworks.HDL.AnnotateModel">
+<!-- mdladv_ignore_start --><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAA0klEQVR42mN8+PAhAymAkWQNqzf0EK/azDAUpAFIIYv+//8HxoIy/jMyfPx0d+3q4+bm5ugasKpm+Pfn45eHKBouX74MlNPR0WT4z3Dl6nU0l2hrK378/BDdBoTZYOMhBsMFcNvAwHDlChE2gIz/DwwzhOsRFgIF/6PaYGoQCDFVR1sV5Idrt9Fs0NKU/fT1KZIG/UCI2f8ZQKYy/gcbDzYYKvifAVWDQSBI5t8fqDY4A6wfog1Fg6qSFjHRjNBw6exHIpMGSAMw8UHClEhAcmoFACLZqO1i9O7+AAAAAElFTkSuQmCC" />&#160;<!-- mdladv_ignore_finish --><span class="CheckHeading" id="Heading_com.mathworks.HDL.AnnotateModel">
+4.3. Annotate Model with Synthesis Result</span>
+<!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --><!-- mdladv_ignore_finish --></div>
+<!-- mdladv_ignore_start --><div class="subsection"><!-- mdladv_ignore_finish --><p />Not Run<!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish --><!-- mdladv_ignore_start --></div><!-- mdladv_ignore_finish -->
+
+</div>
+</div><span name = "EmbedImages" id="EmbedImages"></span>
+</body>  
+</html>  
